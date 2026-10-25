@@ -209,20 +209,23 @@
         </ul>
       </article>
 
-      <article class="experiment invalid" id="test-003">
+      <article class="experiment" id="test-003">
         <header class="experiment-header">
-          <div><span class="test-number">Test 003</span><h3>Cross-identity sword fight—with a methodological flaw.</h3></div>
-          <p class="verdict invalid-label">Useful result, invalid proof</p>
+          <div><span class="test-number">Test 003</span><h3>A real three-stage performance transplant.</h3></div>
+          <p class="verdict mixed">Promising chain, confounded staging</p>
         </header>
-        <p class="experiment-summary">The target character looked convincing and the train action worked, but the final stage used a precomposed fight image. That made the model animate an answer we had already composed. We keep this test because it exposed a crucial evaluation error.</p>
-        <div class="video-grid three">
-          <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t003-target-face-synthesis.mp4"></video><figcaption><b>Target face reenactment</b><span>Identity-normalized facial carrier</span></figcaption></figure>
-          <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t003-train-direct-composite.mp4"></video><figcaption><b>Direct face conditioning</b><span>Stronger timing, composite setup</span></figcaption></figure>
-          <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t003-train-clean-composite.mp4"></video><figcaption><b>Two-stage conditioning</b><span>Cleaner face, softer timing</span></figcaption></figure>
+        <p class="experiment-summary">This test did achieve a useful cross-identity chain: Maung's recorded facial performance became a target-identity talking performance, which then drove the bowl-cut character in the train action shot. The final action stage used a precomposed fight image, so it is valid evidence for the performance-transplant sequence but not proof that H3 independently composed identity, action, location and camera.</p>
+        <div class="transfer-chain" aria-label="Source performance to target performance to final shot">
+          <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/source-performance.mp4"></video><figcaption><b>1 · Source performance</b><span>Maung's original facial timing</span></figcaption></figure>
+          <div class="chain-arrow" aria-hidden="true">→</div>
+          <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t003-target-face-synthesis.mp4"></video><figcaption><b>2 · Target performance</b><span>Bowl-cut identity reenacts the face</span></figcaption></figure>
+          <div class="chain-arrow" aria-hidden="true">→</div>
+          <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t003-train-clean-composite.mp4"></video><figcaption><b>3 · Final action shot</b><span>Target performance drives the train fight</span></figcaption></figure>
         </div>
+        <details class="alternate-branch"><summary>Compare the direct source-to-final branch</summary><div class="video-grid two"><figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/source-performance.mp4"></video><figcaption><b>Source performance</b><span>Original identity and framing</span></figcaption></figure><figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t003-train-direct-composite.mp4"></video><figcaption><b>Direct final</b><span>Source face video conditions the action shot</span></figcaption></figure></div></details>
         <div class="failure-strip">
           <figure><img src="assets/images/rejected-punk-samurai-sheet.png" alt="Rejected oversized-face samurai character sheet" loading="lazy"><figcaption><b>Rejected:</b> giant face and cartoon proportions</figcaption></figure>
-          <figure><img src="assets/images/rejected-train-composite.png" alt="Rejected precomposed train fight image" loading="lazy"><figcaption><b>Excluded from Test 004:</b> precomposed answer</figcaption></figure>
+          <figure><img src="assets/images/rejected-train-composite.png" alt="Precomposed train fight image used in Test 003" loading="lazy"><figcaption><b>Test 003 caveat:</b> useful staging input, but invalid for proving independent composition; excluded from Test 004</figcaption></figure>
         </div>
       </article>
 
