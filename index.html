@@ -254,6 +254,30 @@
         </ul>
       </article>
 
+      <article class="experiment featured" id="test-009">
+        <header class="experiment-header">
+          <div><span class="test-number">Test 009</span><h3>Reconstruct the facial performance before asking H3 to reframe it.</h3></div>
+          <p class="verdict pass">3D performance carrier validated</p>
+        </header>
+        <p class="experiment-summary">Instead of asking H3 to infer Maung's acting while also changing actor, body, location and camera, this test first fits the recorded performance to Google GNM Head v3. The fitted head is then rephotographed through an independent camera orbit and its expression deltas are applied to the locked moustache-character identity.</p>
+        <div class="video-grid two">
+          <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t009-source-gnm-target.mp4"></video><figcaption><b>Time-aligned three-way comparison</b><span>Source video → source GNM fit → target-identity GNM retarget</span></figcaption></figure>
+          <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t009-source-vs-geometry.mp4"></video><figcaption><b>Independent novel-view camera</b><span>The performance remains synchronized during a -35° to +35° orbit</span></figcaption></figure>
+        </div>
+        <div class="metrics" aria-label="GNM performance-fit measurements">
+          <div class="metric-head"><h4>Measured facial fit</h4><p>155 of 155 frames tracked.</p></div>
+          <div class="metric-row note"><span>Mouth-open correlation</span><div><b>0.9774</b> source versus fitted GNM geometry</div></div>
+          <div class="metric-row note"><span>Normalized landmark error</span><div><b>0.1151</b> mean · <b>0.1257</b> p95</div></div>
+        </div>
+        <ul class="findings">
+          <li>GNM is a dense facial system: 17,821 vertices, 253 identity controls and 383 expression controls.</li>
+          <li>MHR remains the better body carrier: 18,439 vertices, 127 bones and the stunt/body animation.</li>
+          <li>The correct combination is MHR body plus GNM head, joined at the neck and directed by the same Blender camera.</li>
+          <li>Lip closure is still compressed, and projected source detail carries some hair/stubble contamination.</li>
+          <li>The moustache and bowl cut remain neural appearance features, not recovered geometry; they belong in the final identity/appearance pass.</li>
+        </ul>
+      </article>
+
       <article class="experiment featured" id="test-004">
         <header class="experiment-header">
           <div><span class="test-number">Test 004</span><h3>Independent references + camera-directable 3D actor.</h3></div>
