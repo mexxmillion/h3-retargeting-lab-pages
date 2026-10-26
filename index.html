@@ -37,8 +37,8 @@
           <a class="button ghost" href="assets/files/test-004-animated-mhr.glb" download>Download animated GLB</a>
         </div>
         <dl class="hero-stats">
-          <div><dt>14</dt><dd>embedded test videos</dd></div>
-          <div><dt>90</dt><dd>frames in the final test</dd></div>
+          <div><dt>17</dt><dd>embedded test videos</dd></div>
+          <div><dt>155</dt><dd>frames in the latest test</dd></div>
           <div><dt>8</dt><dd>H3 sampling steps</dd></div>
           <div><dt>0</dt><dd>composed frames in Test 004</dd></div>
         </dl>
@@ -227,6 +227,31 @@
           <figure><img src="assets/images/rejected-punk-samurai-sheet.png" alt="Rejected oversized-face samurai character sheet" loading="lazy"><figcaption><b>Rejected:</b> giant face and cartoon proportions</figcaption></figure>
           <figure><img src="assets/images/rejected-train-composite.png" alt="Precomposed train fight image used in Test 003" loading="lazy"><figcaption><b>Test 003 caveat:</b> useful staging input, but invalid for proving independent composition; excluded from Test 004</figcaption></figure>
         </div>
+      </article>
+
+      <article class="experiment" id="test-008">
+        <header class="experiment-header">
+          <div><span class="test-number">Test 008</span><h3>Return to Test 003: actor change + street reframe.</h3></div>
+          <p class="verdict mixed">Reframe succeeds; exact face timing fails</p>
+        </header>
+        <p class="experiment-summary">This test deliberately restores the three-stage method Maung preferred: recorded facial performance → clean target-identity performance → a radically reframed action shot. A precomposed street-fight image is allowed because the goal here is actor change and shot reframing, not proof of independent composition.</p>
+        <div class="video-grid two">
+          <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t008-street-swordfight.mp4"></video><figcaption><b>Final street sword fight</b><span>Stable actor change, street, fighters and swords</span></figcaption></figure>
+          <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t008-three-stage-labeled.mp4"></video><figcaption><b>Labeled three-stage chain</b><span>Source → target performance → reframed shot</span></figcaption></figure>
+        </div>
+        <details open>
+          <summary>Inspect facial timing at equal scale</summary>
+          <div class="video-grid two">
+            <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t008-face-transfer-labeled.mp4"></video><figcaption><b>Tracked final hero face</b><span>The wide action shot invents expressions between beats</span></figcaption></figure>
+            <figure class="video-card"><img src="assets/images/t008-opening-staging.png" alt="Precomposed autumn street sword-fight opening reference" loading="lazy"><figcaption><b>Allowed staging input</b><span>Opening placement and location, as in Test 003</span></figcaption></figure>
+          </div>
+        </details>
+        <ul class="findings">
+          <li>Successful actor replacement and radical close-up-to-full-body reframe.</li>
+          <li>Coherent two-person blocking, adult scale, street continuity and unusually stable swords.</li>
+          <li>Camera parallax is real but the orbit is modest, not the requested 70 degrees.</li>
+          <li>Exact expression timing does not survive: source→final mouth-open correlation is 0.087 and the final invents an open-mouth yell over the source's pursed ending.</li>
+        </ul>
       </article>
 
       <article class="experiment featured" id="test-004">
