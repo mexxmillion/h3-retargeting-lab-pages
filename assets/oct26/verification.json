@@ -1,0 +1,153 @@
+{
+  "missing_local_links": [],
+  "video_checks": [
+    {
+      "file": "fight-face-edit-clean.mp4",
+      "frames": 144,
+      "fps": "24/1",
+      "audio": true
+    },
+    {
+      "file": "fight-face-edit-pip.mp4",
+      "frames": 144,
+      "fps": "24/1",
+      "audio": true
+    },
+    {
+      "file": "h3-before-after.mp4",
+      "frames": 136,
+      "fps": "24/1",
+      "audio": true
+    },
+    {
+      "file": "h3-eros-old-clean.mp4",
+      "frames": 155,
+      "fps": "24/1",
+      "audio": true
+    },
+    {
+      "file": "h3-eros-old-pip.mp4",
+      "frames": 155,
+      "fps": "24/1",
+      "audio": true
+    },
+    {
+      "file": "h3-flat-clean.mp4",
+      "frames": 136,
+      "fps": "24/1",
+      "audio": true
+    },
+    {
+      "file": "h3-flat-pip.mp4",
+      "frames": 136,
+      "fps": "24/1",
+      "audio": true
+    },
+    {
+      "file": "h3-lateral-clean.mp4",
+      "frames": 136,
+      "fps": "24/1",
+      "audio": true
+    },
+    {
+      "file": "h3-lateral-pip.mp4",
+      "frames": 136,
+      "fps": "24/1",
+      "audio": true
+    },
+    {
+      "file": "pullback-clean.mp4",
+      "frames": 144,
+      "fps": "24/1",
+      "audio": true
+    },
+    {
+      "file": "pullback-pip.mp4",
+      "frames": 144,
+      "fps": "24/1",
+      "audio": true
+    },
+    {
+      "file": "sam3-guide.mp4",
+      "frames": 141,
+      "fps": "24/1",
+      "audio": false
+    },
+    {
+      "file": "seedance-new-clean.mp4",
+      "frames": 136,
+      "fps": "24/1",
+      "audio": true
+    },
+    {
+      "file": "seedance-new-pip.mp4",
+      "frames": 136,
+      "fps": "24/1",
+      "audio": true
+    },
+    {
+      "file": "seedance-old-clean.mp4",
+      "frames": 155,
+      "fps": "24/1",
+      "audio": true
+    },
+    {
+      "file": "seedance-old-pip.mp4",
+      "frames": 155,
+      "fps": "24/1",
+      "audio": true
+    },
+    {
+      "file": "source-clean.mp4",
+      "frames": 179,
+      "fps": "30/1",
+      "audio": true
+    },
+    {
+      "file": "source-seedance-h3.mp4",
+      "frames": 136,
+      "fps": "24/1",
+      "audio": true
+    },
+    {
+      "file": "source-sword-pullback.mp4",
+      "frames": 144,
+      "fps": "24/1",
+      "audio": true
+    },
+    {
+      "file": "source-vs-sword.mp4",
+      "frames": 144,
+      "fps": "24/1",
+      "audio": true
+    },
+    {
+      "file": "sword-clean.mp4",
+      "frames": 144,
+      "fps": "24/1",
+      "audio": true
+    },
+    {
+      "file": "sword-pip.mp4",
+      "frames": 144,
+      "fps": "24/1",
+      "audio": true
+    },
+    {
+      "file": "train-direct-clean.mp4",
+      "frames": 144,
+      "fps": "24/1",
+      "audio": true
+    },
+    {
+      "file": "train-direct-pip.mp4",
+      "frames": 144,
+      "fps": "24/1",
+      "audio": true
+    }
+  ],
+  "source_aac_sha256": "1c3faf681500db90f8d56f1607d7ffb0cce06f83c4bd0ceca2387985034dc56d",
+  "unique_today_submissions": 10,
+  "completed_yesterday_outputs_found": 19,
+  "notes": "Codec/frame/audio/link verification; not an automated facial-performance score."
+}

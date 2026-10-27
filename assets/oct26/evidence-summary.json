@@ -1,0 +1,16 @@
+{
+  "h3": {
+    "submitted": 5,
+    "completed": 3,
+    "failed": 1,
+    "interrupted": 1
+  },
+  "seedance": {
+    "submitted": 5,
+    "completed": 2,
+    "failed": 3,
+    "interrupted": 0
+  },
+  "auxiliary_still_renders": 3,
+  "yesterday_completed_seedance_outputs_found": 19
+}

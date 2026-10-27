@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0d12">
+  <meta name="description" content="A practical lab notebook on retargeting facial dialogue, stunt motion, identity, wardrobe, environment and camera into a new MiniMax H3 shot.">
+  <title>Performance ≠ Shot — H3 Retargeting Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to report</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Performance Retargeting Lab home">
+      <span class="brand-mark">P≠S</span>
+      <span>H3 Retargeting Lab</span>
+    </a>
+    <nav aria-label="Report sections">
+      <a href="#problem">Problem</a>
+      <a href="#method">Method</a>
+      <a href="#tests">Tests</a>
+      <a href="#lessons">Lessons</a>
+      <a href="#reproduce">Reproduce</a>
+    </nav>
+    <a class="repo-link" href="https://github.com/mexxmillion/h3-performance-transfer-lab">GitHub ↗</a>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">Performance retargeting field notes · October 2026</p>
+        <h1>Performance <span>is not</span> the shot.</h1>
+        <p class="dek">A practical attempt to take one actor’s recorded facial dialogue, another performer’s stunt motion, a third character’s identity and wardrobe, an independent location, and a newly directed camera—and make them coexist in one generated shot.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#tests">Watch the tests</a>
+          <a class="button ghost" href="assets/files/test-004-animated-mhr.glb" download>Download animated GLB</a>
+        </div>
+        <dl class="hero-stats">
+          <div><dt>17</dt><dd>embedded test videos</dd></div>
+          <div><dt>155</dt><dd>frames in the latest test</dd></div>
+          <div><dt>8</dt><dd>H3 sampling steps</dd></div>
+          <div><dt>0</dt><dd>composed frames in Test 004</dd></div>
+        </dl>
+      </div>
+      <div class="hero-media" aria-label="Source performance and final retargeted shot">
+        <figure class="film-frame source-frame">
+          <video src="assets/video/source-performance.mp4" muted loop autoplay playsinline preload="metadata"></video>
+          <figcaption><b>01</b> Facial performance source</figcaption>
+        </figure>
+        <div class="transfer-arrow" aria-hidden="true">→</div>
+        <figure class="film-frame result-frame">
+          <video src="assets/video/t004-final-guided.mp4" muted loop autoplay playsinline preload="metadata"></video>
+          <figcaption><b>02</b> New identity, body, world + camera</figcaption>
+        </figure>
+      </div>
+      <p class="sound-note">Hero videos are muted. Full clips below include the original synchronized audio.</p>
+    </section>
+
+    <section class="section" id="problem">
+      <div class="section-heading">
+        <p class="eyebrow">The actual problem</p>
+        <h2>Separate the authorities.</h2>
+        <p>A normal “character replacement” keeps the source shot and changes the person. This project asks for something harder: preserve selected performance signals while replacing the pose, body action, framing, camera, wardrobe and world.</p>
+      </div>
+
+      <div class="authority-grid">
+        <article class="authority authority-face">
+          <span class="authority-index">A</span>
+          <h3>Facial performance</h3>
+          <p>Mouth, jaw, eyes, brows, head attitude and emotional timing from Maung’s studio recording.</p>
+          <small>Must not bring the selfie lens, room, body pose or source scale.</small>
+        </article>
+        <article class="authority authority-stunt">
+          <span class="authority-index">B</span>
+          <h3>Body performance</h3>
+          <p>A separately staged white-suit fighter supplies readable full-body action.</p>
+          <small>Future versions can use a real stunt performer or dance capture.</small>
+        </article>
+        <article class="authority authority-identity">
+          <span class="authority-index">C</span>
+          <h3>Identity + wardrobe</h3>
+          <p>The bowl-cut, handlebar-moustache character and checked brown suit come from still references.</p>
+          <small>Head scale and adult anatomy must remain physically coherent.</small>
+        </article>
+        <article class="authority authority-world">
+          <span class="authority-index">D</span>
+          <h3>World + camera</h3>
+          <p>An empty train roof or street establishes place. Camera choreography is prompted or authored in 3D.</p>
+          <small>The location image is not a starting composition.</small>
+        </article>
+      </div>
+
+      <aside class="rule-card">
+        <p class="rule-kicker">The rule that changed the experiment</p>
+        <h3>Never hand H3 the answer as a starting frame.</h3>
+        <p>A precomposed image of the target already fighting on the train can produce a good-looking animation, but it does not test independent retargeting. Test 004 receives only separate face, stunt, identity, opponent, location and audio authorities.</p>
+        <code>train-swordfight-composition-v1.png → explicitly excluded</code>
+      </aside>
+    </section>
+
+    <section class="section references" id="references">
+      <div class="section-heading compact">
+        <p class="eyebrow">Reference ledger</p>
+        <h2>What each input is allowed to control.</h2>
+      </div>
+      <div class="reference-grid">
+        <figure class="reference tall">
+          <img src="assets/images/target-face.jpg" alt="Close portrait of the target character with bowl haircut and curled moustache" loading="lazy">
+          <figcaption><b>Identity authority</b><span>Face, hair, moustache</span></figcaption>
+        </figure>
+        <figure class="reference tall">
+          <img src="assets/images/target-body.jpg" alt="Full-body target character in a brown checked suit" loading="lazy">
+          <figcaption><b>Body + wardrobe</b><span>Proportions, suit, shoes</span></figcaption>
+        </figure>
+        <figure class="reference wide">
+          <img src="assets/images/empty-train-roof.png" alt="Empty high-speed train roof at sunset" loading="lazy">
+          <figcaption><b>Location authority</b><span>Empty train roof only</span></figcaption>
+        </figure>
+        <figure class="reference">
+          <img src="assets/images/mocap-white-swordsman.png" alt="White-suit performer holding a sword on blue" loading="lazy">
+          <figcaption><b>Stunt identity</b><span>White extraction target</span></figcaption>
+        </figure>
+        <figure class="reference">
+          <img src="assets/images/mocap-black-opponent.png" alt="Black-suit opponent holding a sword on blue" loading="lazy">
+          <figcaption><b>Opponent authority</b><span>Separate rival reference</span></figcaption>
+        </figure>
+        <figure class="reference wide">
+          <img src="assets/images/street-reference.jpg" alt="City sidewalk with storefronts and traffic light at dusk" loading="lazy">
+          <figcaption><b>Original location study</b><span>Test 001 street geometry</span></figcaption>
+        </figure>
+        <figure class="reference wide">
+          <img src="assets/images/character-sheet-punk.png" alt="Generated black leather punk character reference sheet" loading="lazy">
+          <figcaption><b>Test 001 character sheet</b><span>Leather wardrobe authority</span></figcaption>
+        </figure>
+        <figure class="reference wide">
+          <img src="assets/images/test-001-target-composition.png" alt="Early full-body street composition reference" loading="lazy">
+          <figcaption><b>Early composition study</b><span>Used before the stricter Test 004 contract</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section method" id="method">
+      <div class="section-heading">
+        <p class="eyebrow">Two attack paths</p>
+        <h2>Semantic restaging and explicit 3D.</h2>
+        <p>We did not assume one control representation would solve every part of the shot. The direct branch asks H3 to interpret independent references. The 3D branch converts stunt and face signals into a camera-directable actor before returning to H3 for appearance synthesis.</p>
+      </div>
+
+      <div class="pipeline">
+        <div class="pipeline-lane">
+          <p class="lane-label">Lane 1 · Direct H3</p>
+          <ol>
+            <li><b>Isolate face video</b><span>Remove the source room and body cues.</span></li>
+            <li><b>Supply independent stills</b><span>Identity, body, empty location, opponent.</span></li>
+            <li><b>Describe a new shot</b><span>Full body, train roof, fight, front-to-side orbit.</span></li>
+            <li><b>Generate with exact audio</b><span>H3 Eros, eight steps, 24 fps.</span></li>
+          </ol>
+        </div>
+        <div class="pipeline-lane accent">
+          <p class="lane-label">Lane 2 · Reconstruct + direct</p>
+          <ol>
+            <li><b>Generate stunt plate</b><span>White target and black rival on clean blue.</span></li>
+            <li><b>Isolate white performer</b><span>CPU color segmentation and tracked crop.</span></li>
+            <li><b>Recover MHR actor</b><span>SAM 3D Body pose, shape, hands and mesh.</span></li>
+            <li><b>Apply face coefficients</b><span>MediaPipe ARKit-52 → MHR face expressions.</span></li>
+            <li><b>Redirect in Blender</b><span>New front-to-side camera around the same motion.</span></li>
+            <li><b>Return guide to H3</b><span>Use 3D for motion/camera, stills for final appearance.</span></li>
+          </ol>
+        </div>
+      </div>
+      <p class="method-note"><b>FLAME status:</b> the Python implementation and dependencies are staged, but the official licensed model is not redistributed. The working Test 004 face path is MediaPipe-to-MHR through ComfyUI’s native SAM 3D Body integration.</p>
+    </section>
+
+    <section class="section tests" id="tests">
+      <div class="section-heading">
+        <p class="eyebrow">Experiment log</p>
+        <h2>What we tried, in order.</h2>
+        <p>Use the paired controls to replay a comparison together. Audio is authoritative but only one clip should be unmuted at a time.</p>
+      </div>
+
+      <article class="experiment" id="test-001">
+        <header class="experiment-header">
+          <div><span class="test-number">Test 001</span><h3>Can a talking selfie become a full-body street walk?</h3></div>
+          <p class="verdict mixed">Partial facial transfer</p>
+        </header>
+        <p class="experiment-summary">All variants successfully discarded the source room, chair and selfie framing. Audio alone already drove strong lip synchronization, so “the mouth moves” was not enough evidence that the source face video controlled the result.</p>
+        <div class="compare-toolbar" data-controls-for="t001-a">
+          <button type="button" data-action="play">Play pair</button>
+          <button type="button" data-action="restart">Restart</button>
+        </div>
+        <div class="video-grid two" data-sync-group="t001-a">
+          <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t001-control.mp4"></video><figcaption><b>No-video control</b><span>Audio + prompt only</span></figcaption></figure>
+          <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t001-face-isolated.mp4"></video><figcaption><b>Isolated-face reference</b><span>Best mouth-width timing in Test 001</span></figcaption></figure>
+        </div>
+        <details>
+          <summary>Open the other Test 001 variants</summary>
+          <div class="video-grid three">
+            <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t001-raw-video.mp4"></video><figcaption><b>Raw source video</b><span>More visual signal, more leakage risk</span></figcaption></figure>
+            <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t001-face-synthesis.mp4"></video><figcaption><b>Face synthesis intermediate</b><span>Clean temporal carrier</span></figcaption></figure>
+            <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t001-synthesized-face.mp4"></video><figcaption><b>Two-stage street result</b><span>Cleaner, but facial detail softens</span></figcaption></figure>
+            <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t001-mesh-guide.mp4"></video><figcaption><b>Face-mesh guide</b><span>Useful eye signal, incomplete brows</span></figcaption></figure>
+          </div>
+        </details>
+        <ul class="findings">
+          <li>Audio dominated jaw and lip timing.</li>
+          <li>Face isolation prevented source-shot leakage.</li>
+          <li>A second generative pass lost some eye and brow detail.</li>
+        </ul>
+      </article>
+
+      <article class="experiment" id="test-003">
+        <header class="experiment-header">
+          <div><span class="test-number">Test 003</span><h3>A real three-stage performance transplant.</h3></div>
+          <p class="verdict mixed">Promising chain, confounded staging</p>
+        </header>
+        <p class="experiment-summary">This test did achieve a useful cross-identity chain: Maung's recorded facial performance became a target-identity talking performance, which then drove the bowl-cut character in the train action shot. The final action stage used a precomposed fight image, so it is valid evidence for the performance-transplant sequence but not proof that H3 independently composed identity, action, location and camera.</p>
+        <div class="transfer-chain" aria-label="Source performance to target performance to final shot">
+          <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/source-performance.mp4"></video><figcaption><b>1 · Source performance</b><span>Maung's original facial timing</span></figcaption></figure>
+          <div class="chain-arrow" aria-hidden="true">→</div>
+          <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t003-target-face-synthesis.mp4"></video><figcaption><b>2 · Target performance</b><span>Bowl-cut identity reenacts the face</span></figcaption></figure>
+          <div class="chain-arrow" aria-hidden="true">→</div>
+          <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t003-train-clean-composite.mp4"></video><figcaption><b>3 · Final action shot</b><span>Target performance drives the train fight</span></figcaption></figure>
+        </div>
+        <details class="alternate-branch"><summary>Compare the direct source-to-final branch</summary><div class="video-grid two"><figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/source-performance.mp4"></video><figcaption><b>Source performance</b><span>Original identity and framing</span></figcaption></figure><figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t003-train-direct-composite.mp4"></video><figcaption><b>Direct final</b><span>Source face video conditions the action shot</span></figcaption></figure></div></details>
+        <div class="failure-strip">
+          <figure><img src="assets/images/rejected-punk-samurai-sheet.png" alt="Rejected oversized-face samurai character sheet" loading="lazy"><figcaption><b>Rejected:</b> giant face and cartoon proportions</figcaption></figure>
+          <figure><img src="assets/images/rejected-train-composite.png" alt="Precomposed train fight image used in Test 003" loading="lazy"><figcaption><b>Test 003 caveat:</b> useful staging input, but invalid for proving independent composition; excluded from Test 004</figcaption></figure>
+        </div>
+      </article>
+
+      <article class="experiment" id="test-008">
+        <header class="experiment-header">
+          <div><span class="test-number">Test 008</span><h3>Return to Test 003: actor change + street reframe.</h3></div>
+          <p class="verdict mixed">Reframe succeeds; exact face timing fails</p>
+        </header>
+        <p class="experiment-summary">This test deliberately restores the three-stage method Maung preferred: recorded facial performance → clean target-identity performance → a radically reframed action shot. A precomposed street-fight image is allowed because the goal here is actor change and shot reframing, not proof of independent composition.</p>
+        <div class="video-grid two">
+          <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t008-street-swordfight.mp4"></video><figcaption><b>Final street sword fight</b><span>Stable actor change, street, fighters and swords</span></figcaption></figure>
+          <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t008-three-stage-labeled.mp4"></video><figcaption><b>Labeled three-stage chain</b><span>Source → target performance → reframed shot</span></figcaption></figure>
+        </div>
+        <details open>
+          <summary>Inspect facial timing at equal scale</summary>
+          <div class="video-grid two">
+            <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t008-face-transfer-labeled.mp4"></video><figcaption><b>Tracked final hero face</b><span>The wide action shot invents expressions between beats</span></figcaption></figure>
+            <figure class="video-card"><img src="assets/images/t008-opening-staging.png" alt="Precomposed autumn street sword-fight opening reference" loading="lazy"><figcaption><b>Allowed staging input</b><span>Opening placement and location, as in Test 003</span></figcaption></figure>
+          </div>
+        </details>
+        <ul class="findings">
+          <li>Successful actor replacement and radical close-up-to-full-body reframe.</li>
+          <li>Coherent two-person blocking, adult scale, street continuity and unusually stable swords.</li>
+          <li>Camera parallax is real but the orbit is modest, not the requested 70 degrees.</li>
+          <li>Exact expression timing does not survive: source→final mouth-open correlation is 0.087 and the final invents an open-mouth yell over the source's pursed ending.</li>
+        </ul>
+      </article>
+
+      <article class="experiment featured" id="test-009">
+        <header class="experiment-header">
+          <div><span class="test-number">Test 009</span><h3>Reconstruct the facial performance before asking H3 to reframe it.</h3></div>
+          <p class="verdict pass">3D performance carrier validated</p>
+        </header>
+        <p class="experiment-summary">Instead of asking H3 to infer Maung's acting while also changing actor, body, location and camera, this test first fits the recorded performance to Google GNM Head v3. The fitted head is then rephotographed through an independent camera orbit and its expression deltas are applied to the locked moustache-character identity.</p>
+        <div class="video-grid two">
+          <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t009-source-gnm-target.mp4"></video><figcaption><b>Time-aligned three-way comparison</b><span>Source video → source GNM fit → target-identity GNM retarget</span></figcaption></figure>
+          <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t009-source-vs-geometry.mp4"></video><figcaption><b>Independent novel-view camera</b><span>The performance remains synchronized during a -35° to +35° orbit</span></figcaption></figure>
+        </div>
+        <div class="metrics" aria-label="GNM performance-fit measurements">
+          <div class="metric-head"><h4>Measured facial fit</h4><p>155 of 155 frames tracked.</p></div>
+          <div class="metric-row note"><span>Mouth-open correlation</span><div><b>0.9774</b> source versus fitted GNM geometry</div></div>
+          <div class="metric-row note"><span>Normalized landmark error</span><div><b>0.1151</b> mean · <b>0.1257</b> p95</div></div>
+        </div>
+        <ul class="findings">
+          <li>GNM is a dense facial system: 17,821 vertices, 253 identity controls and 383 expression controls.</li>
+          <li>MHR remains the better body carrier: 18,439 vertices, 127 bones and the stunt/body animation.</li>
+          <li>The correct combination is MHR body plus GNM head, joined at the neck and directed by the same Blender camera.</li>
+          <li>Lip closure is still compressed, and projected source detail carries some hair/stubble contamination.</li>
+          <li>The moustache and bowl cut remain neural appearance features, not recovered geometry; they belong in the final identity/appearance pass.</li>
+        </ul>
+      </article>
+
+      <article class="experiment featured" id="test-004">
+        <header class="experiment-header">
+          <div><span class="test-number">Test 004</span><h3>Independent references + camera-directable 3D actor.</h3></div>
+          <p class="verdict pass">Architecture validated</p>
+        </header>
+        <p class="experiment-summary">This is the real stress test. No composed fight still enters either final graph. The direct version favors action. The reconstructed/Blender-guided version favors camera control, stable proportions and mouth timing.</p>
+
+        <div class="stage-label"><span>Stage A</span> Generate clean stunt material</div>
+        <div class="video-grid two narrow">
+          <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t004-stunt-plate.mp4"></video><figcaption><b>White/black stunt plate</b><span>Extraction material, not a beauty shot</span></figcaption></figure>
+          <div class="text-card">
+            <h4>Gotcha: opponent overlap</h4>
+            <p>The white actor is detected in all 90 frames, but crossing swords and bodies erase portions of the segmentation. A better capture would record the stunt performer alone and introduce the opponent only at synthesis time.</p>
+            <p>SAM 3D Body reconstructs people—not the sword—so props need their own tracking or Blender rig.</p>
+          </div>
+        </div>
+
+        <div class="stage-label"><span>Stage B</span> Reconstruct face + body, then redirect camera</div>
+        <div class="compare-toolbar" data-controls-for="t004-3d">
+          <button type="button" data-action="play">Play pair</button>
+          <button type="button" data-action="restart">Restart</button>
+        </div>
+        <div class="video-grid two" data-sync-group="t004-3d">
+          <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t004-sam3d-guide.mp4"></video><figcaption><b>SAM 3D / MHR reconstruction</b><span>Body plus Maung’s facial coefficients</span></figcaption></figure>
+          <figure class="video-card"><video controls playsinline preload="metadata" src="assets/video/t004-blender-orbit.mp4"></video><figcaption><b>Independent Blender camera</b><span>Front → three-quarter → side</span></figcaption></figure>
+        </div>
+
+        <div class="stage-label"><span>Stage C</span> Compare direct semantic restaging against 3D guidance</div>
+        <div class="compare-toolbar" data-controls-for="t004-final">
+          <button type="button" data-action="play">Play pair</button>
+          <button type="button" data-action="restart">Restart</button>
+        </div>
+        <div class="video-grid two" data-sync-group="t004-final">
+          <figure class="video-card winner-action"><video controls playsinline preload="metadata" src="assets/video/t004-direct-independent.mp4"></video><figcaption><b>Direct independent H3</b><span>Winner: visible combat interaction</span></figcaption></figure>
+          <figure class="video-card winner-control"><video controls playsinline preload="metadata" src="assets/video/t004-final-guided.mp4"></video><figcaption><b>3D-guided H3</b><span>Winner: camera, scale and mouth timing</span></figcaption></figure>
+        </div>
+
+        <div class="metrics" aria-label="Facial timing correlation comparison">
+          <div class="metric-head"><h4>Same-frame correlation to source</h4><p>Diagnostic geometry—not a perceptual quality score.</p></div>
+          <div class="metric-row"><span>Mouth open</span><div class="bars"><i class="bar direct" style="--value:15.07%"><em>Direct 0.151</em></i><i class="bar guided" style="--value:53.31%"><em>3D guided 0.533</em></i></div></div>
+          <div class="metric-row"><span>Mouth width</span><div class="bars"><i class="bar direct" style="--value:25.92%"><em>Direct 0.259</em></i><i class="bar guided" style="--value:48.94%"><em>3D guided 0.489</em></i></div></div>
+          <div class="metric-row note"><span>Face detection</span><div><b>45/90</b> direct frames · <b>84/90</b> guided frames</div></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section lessons" id="lessons">
+      <div class="section-heading">
+        <p class="eyebrow">Caveats and gotchas</p>
+        <h2>What we actually learned.</h2>
+      </div>
+      <div class="lesson-grid">
+        <article><span>01</span><h3>Lip sync is not proof of transfer.</h3><p>Exact audio alone can create plausible mouth motion. A visual performance reference must outperform an audio-only control on timing, eyes, brows or head attitude.</p></article>
+        <article><span>02</span><h3>Composition can hide a broken experiment.</h3><p>A beautiful precomposed first frame makes generation easier while defeating the purpose of independently combining authorities.</p></article>
+        <article><span>03</span><h3>Face isolation helps, but abstraction costs detail.</h3><p>Removing the room and torso prevents shot leakage. Each additional generative normalization pass can erase subtle eye and brow motion.</p></article>
+        <article><span>04</span><h3>3D controls the camera, not final realism.</h3><p>The MHR mesh is valuable because it lets us rephotograph the performance. H3 still provides identity, clothing, environment and cinematic texture.</p></article>
+        <article><span>05</span><h3>Occlusion contaminates body capture.</h3><p>Two fighters in one extraction plate create missing limbs and unstable poses. Capture the controlled performer alone whenever possible.</p></article>
+        <article><span>06</span><h3>Props are their own authority.</h3><p>Human reconstruction does not recover sword geometry. A production pipeline needs rigid prop tracking, a Blender prop rig, or a separate semantic reference.</p></article>
+        <article><span>07</span><h3>One winner is the wrong goal.</h3><p>The direct route delivered better combat; the 3D route delivered better direction and visemes. A hybrid pipeline should choose the strongest representation per signal.</p></article>
+        <article><span>08</span><h3>Measure—but still watch the motion.</h3><p>Correlations catch timing changes, but camera rotation, face visibility and identity shifts can distort geometry. Continuous visual QC remains mandatory.</p></article>
+      </div>
+    </section>
+
+    <section class="section reproduce" id="reproduce">
+      <div class="section-heading">
+        <p class="eyebrow">Reproducibility</p>
+        <h2>The tested recipe.</h2>
+      </div>
+      <div class="spec-grid">
+        <dl>
+          <div><dt>Canvas</dt><dd>640 × 1120 · 0.7168 MP</dd></div>
+          <div><dt>Duration</dt><dd>3.75 s · 90 frames · 24 fps</dd></div>
+          <div><dt>Model</dt><dd>h3ErosMax_beta5</dd></div>
+          <div><dt>Sampler</dt><dd>er_sde · beta57 · 8 steps</dd></div>
+          <div><dt>Seed</dt><dd>100404</dd></div>
+          <div><dt>Audio</dt><dd>Native exact-audio lock</dd></div>
+        </dl>
+        <div class="node-list">
+          <h3>Core graph nodes</h3>
+          <code>MiniMaxH3ReferencePack</code>
+          <code>MiniMaxH3ReferenceToVideo</code>
+          <code>MiniMaxH3NativeAudioLock</code>
+          <code>SAM3DBody_Predict</code>
+          <code>SAM3DBody_FaceExpression</code>
+          <code>SAM3DBody_Smooth</code>
+          <code>BuildPoseFile → SaveGLB</code>
+        </div>
+      </div>
+      <div class="repro-links">
+        <a href="https://github.com/mexxmillion/h3-performance-transfer-lab/blob/main/workflows/test-004-train-direct-independent.json">Direct workflow JSON ↗</a>
+        <a href="https://github.com/mexxmillion/h3-performance-transfer-lab/blob/main/workflows/test-004-sam3d-combined-actor.json">SAM 3D workflow JSON ↗</a>
+        <a href="https://github.com/mexxmillion/h3-performance-transfer-lab/blob/main/workflows/test-004-train-sam3d-guided.json">Final guided workflow JSON ↗</a>
+        <a href="assets/files/test-004-animated-mhr.glb" download>Animated MHR actor ↓</a>
+      </div>
+      <details class="prompt-contract">
+        <summary>Read the final H3 conditioning contract</summary>
+        <pre><code>&lt;Picture 1&gt; = target face identity only
+&lt;Picture 2&gt; = target body proportions and checked suit only
+&lt;Picture 3&gt; = empty moving-train roof, location and lighting only
+&lt;Picture 4&gt; = separate black-suit opponent
+&lt;Video 1&gt; = Maung's facial dialogue performance; never copy its studio framing
+&lt;Video 2&gt; = reconstructed 3D body action and front-to-side camera guide only
+&lt;Audio 1&gt; = authoritative dialogue timing and soundtrack
+
+Create a cinematic wide full-body train-roof fight. Retarget the dialogue
+performance onto the different body action and independent camera. Preserve
+normal adult anatomy and head scale. Do not use a static starting composition,
+do not paste or enlarge a face, and do not recreate the studio framing.</code></pre>
+      </details>
+      <p class="hardware-note">Executed locally across two RTX 3090 workers and CPU preprocessing. The project preserves prompts, graph payloads, manifests, hashes and scripts; generated media is embedded here for review.</p>
+    </section>
+
+    <section class="section next" id="next">
+      <div class="next-copy">
+        <p class="eyebrow">Next iteration</p>
+        <h2>Build a cleaner stunt authority.</h2>
+        <p>Record or generate a solo white-suit performer with uninterrupted hands and feet. Track a rigid sword separately. Retarget the body and source face into MHR, author a more aggressive orbit in Blender, and ask H3 to synthesize the target identity, costume, opponent and environment around that guide.</p>
+        <ol>
+          <li>Solo stunt capture—no opponent overlap.</li>
+          <li>Explicit prop trajectory and hand attachment.</li>
+          <li>Official FLAME model comparison when licensed data is available.</li>
+          <li>Per-channel face evaluation: jaw, lips, blink, brows, gaze and head pose.</li>
+          <li>Longer shot only after the 3.75-second control stack is stable.</li>
+        </ol>
+      </div>
+      <div class="next-visual">
+        <img src="assets/images/target-swordsman-sheet.png" alt="Target character swordsman reference sheet" loading="lazy">
+        <div class="next-stamp">Version 0.4<br>not the finish line</div>
+      </div>
+    </section>
+
+    <section class="sources">
+      <h2>Project and primary technical sources</h2>
+      <p><a href="https://github.com/mexxmillion/h3-performance-transfer-lab">Project repository</a> · <a href="https://ai.meta.com/sam3d/">Meta SAM 3D</a> · <a href="https://huggingface.co/Comfy-Org/sam-3d-body">Comfy SAM 3D Body checkpoint</a> · <a href="https://flame.is.tuebingen.mpg.de/">FLAME</a> · <a href="https://flame.is.tuebingen.mpg.de/modellicense.html">FLAME license</a> · <a href="https://www.blender.org/">Blender</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built as a working lab notebook. Results are preserved—including the failures—so the next test starts from evidence, not memory.</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+{
+  "alignment": "Source time zero; no per-output retiming, dynamic warping or lip-sync correction. Original continuous AAC is muxed once.",
+  "clips": [
+    {
+      "name": "sword",
+      "source": "X:\\git\\ComfyUI\\h3-performance-transfer-lab\\runs\\test-014-seedance25-sword-action-carrier\\raw\\sword-action-camera-carrier.mp4",
+      "source_face": "X:\\git\\ComfyUI\\h3-performance-transfer-lab\\comparisons\\oct26-article\\source-face-tight.mp4",
+      "audio": "C:\\Users\\Maung\\Downloads\\IMG_2764.MOV",
+      "frames": 144,
+      "fps": 24,
+      "duration": 6.0,
+      "clean": "sword-clean.mp4",
+      "pip": "sword-pip.mp4",
+      "sha256": "3db93d5c53cc6dd2690bebfe52297f2fe9377cd34a6869d7cb210e65dcb30a99"
+    },
+    {
+      "name": "pullback",
+      "source": "X:\\git\\ComfyUI\\h3-performance-transfer-lab\\runs\\test-013-seedance25-camera-matched-carrier\\raw\\camera-matched-carrier.mp4",
+      "source_face": "X:\\git\\ComfyUI\\h3-performance-transfer-lab\\comparisons\\oct26-article\\source-face-tight.mp4",
+      "audio": "C:\\Users\\Maung\\Downloads\\IMG_2764.MOV",
+      "frames": 144,
+      "fps": 24,
+      "duration": 6.0,
+      "clean": "pullback-clean.mp4",
+      "pip": "pullback-pip.mp4",
+      "sha256": "82cbee71c9ddcaa7335a231772f44cbb9b15a87676f5dcbb242dd0acbc467e1d"
+    },
+    {
+      "name": "train-direct",
+      "source": "X:\\git\\ComfyUI\\h3-performance-transfer-lab\\runs\\test-011-seedance25\\raw\\direct-train-fight.mp4",
+      "source_face": "X:\\git\\ComfyUI\\h3-performance-transfer-lab\\comparisons\\oct26-article\\old-face.mp4",
+      "audio": "C:\\Users\\Maung\\Downloads\\IMG_2765.MOV",
+      "frames": 144,
+      "fps": 24,
+      "duration": 6.0,
+      "clean": "train-direct-clean.mp4",
+      "pip": "train-direct-pip.mp4",
+      "sha256": "ee85a3c9e7103e5118bbb3f73dd57b9af9232cd84216ec6137324b8a6e11e771"
+    },
+    {
+      "name": "fight-face-edit",
+      "source": "X:\\git\\ComfyUI\\h3-performance-transfer-lab\\runs\\test-015-seedance25-fight-then-face-edit\\raw\\pass-2-face-edit-composite-guide.mp4",
+      "source_face": "X:\\git\\ComfyUI\\h3-performance-transfer-lab\\comparisons\\oct26-article\\source-face-tight.mp4",
+      "audio": "C:\\Users\\Maung\\Downloads\\IMG_2764.MOV",
+      "frames": 144,
+      "fps": 24,
+      "duration": 6.0,
+      "clean": "fight-face-edit-clean.mp4",
+      "pip": "fight-face-edit-pip.mp4",
+      "sha256": "609642d91c6a63fdd854372fd11baad5149debe1f695718ab6762d9bc89ae1b0"
+    },
+    {
+      "name": "h3-eros-old",
+      "source": "E:\\git\\h3-ko-gunpoint\\take-2765\\ko-gunpoint-h3-eros-direct-v1.mp4",
+      "source_face": "X:\\git\\ComfyUI\\h3-performance-transfer-lab\\comparisons\\oct26-article\\old-face.mp4",
+      "audio": "C:\\Users\\Maung\\Downloads\\IMG_2765.MOV",
+      "frames": 155,
+      "fps": 24,
+      "duration": 6.458333333333333,
+      "clean": "h3-eros-old-clean.mp4",
+      "pip": "h3-eros-old-pip.mp4",
+      "sha256": "e5ac7c6c708761b2c877d33f7ecedd4a79bf0d2f224da3ebf013cecf219a59cb"
+    },
+    {
+      "name": "seedance-old",
+      "source": "X:\\git\\ComfyUI\\h3-performance-transfer-lab\\comparisons\\oct26-article\\seedance-old-take.mp4",
+      "source_face": "X:\\git\\ComfyUI\\h3-performance-transfer-lab\\comparisons\\oct26-article\\old-face.mp4",
+      "audio": "C:\\Users\\Maung\\Downloads\\IMG_2765.MOV",
+      "frames": 155,
+      "fps": 24,
+      "duration": 6.458333333333333,
+      "clean": "seedance-old-clean.mp4",
+      "pip": "seedance-old-pip.mp4",
+      "sha256": "f7e42d4ceeab0e6da93a0f57cd635c1c298d918cd8cb49e2793e9702453d1af8"
+    },
+    {
+      "name": "h3-flat",
+      "source": "E:\\git\\h3-ko-gunpoint\\Ko-Style-Gunpoint-IMG2764-Ref2VA-Turbo8-EulerSimple-v1.mp4",
+      "source_face": "X:\\git\\ComfyUI\\h3-performance-transfer-lab\\comparisons\\oct26-article\\source-face-tight.mp4",
+      "audio": "C:\\Users\\Maung\\Downloads\\IMG_2764.MOV",
+      "frames": 136,
+      "fps": 24,
+      "duration": 5.666666666666667,
+      "clean": "h3-flat-clean.mp4",
+      "pip": "h3-flat-pip.mp4",
+      "sha256": "f5b3ed936a1ba6cc07c6144d86d2ce74fdfdc2bb656e5471cb30d812b01341a5"
+    },
+    {
+      "name": "seedance-new",
+      "source": "X:\\git\\ComfyUI\\h3-performance-transfer-lab\\comparisons\\oct26-article\\seedance-clean-take.mp4",
+      "source_face": "X:\\git\\ComfyUI\\h3-performance-transfer-lab\\comparisons\\oct26-article\\source-face-tight.mp4",
+      "audio": "C:\\Users\\Maung\\Downloads\\IMG_2764.MOV",
+      "frames": 136,
+      "fps": 24,
+      "duration": 5.666666666666667,
+      "clean": "seedance-new-clean.mp4",
+      "pip": "seedance-new-pip.mp4",
+      "sha256": "a6dcc5554e7e3058d449ad570bb91012f639538166898f0c7897501acff360a4"
+    },
+    {
+      "name": "h3-lateral",
+      "source": "E:\\git\\h3-ko-gunpoint\\Ko-Style-Gunpoint-IMG2764-LateralScene-Ref2VA-Turbo8-v3.mp4",
+      "source_face": "X:\\git\\ComfyUI\\h3-performance-transfer-lab\\comparisons\\oct26-article\\source-face-tight.mp4",
+      "audio": "C:\\Users\\Maung\\Downloads\\IMG_2764.MOV",
+      "frames": 136,
+      "fps": 24,
+      "duration": 5.666666666666667,
+      "clean": "h3-lateral-clean.mp4",
+      "pip": "h3-lateral-pip.mp4",
+      "sha256": "a0d4f45fccabbf564fe6449d0011d42e945a0045078cdf1b24f708802609636f"
+    }
+  ]
+}

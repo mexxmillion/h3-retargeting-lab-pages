@@ -1,0 +1,246 @@
+{
+  "scope": "October 26 local gunpoint session only; auxiliary images and SAM3 tracking excluded from the ten video-generation submissions.",
+  "counts": {
+    "h3": {
+      "submitted": 5,
+      "completed": 3,
+      "failed": 1,
+      "interrupted": 1
+    },
+    "seedance": {
+      "submitted": 5,
+      "completed": 2,
+      "failed": 3,
+      "interrupted": 0
+    },
+    "auxiliary_still_renders": 3,
+    "yesterday_completed_seedance_outputs_found": 19
+  },
+  "caveats": [
+    "Scene v2 was a generated still only, never an H3 video submission.",
+    "No detailed Seedance backend error was returned, so codec or media-role incompatibility is an inference, not a proven cause.",
+    "Credit reconciliation and failed-job refund status are unavailable; no total spend is inferred.",
+    "The accepted H3 and Seedance outputs share the clean performance take but differ in conditioning, canvas and duration; not a controlled model benchmark."
+  ],
+  "jobs": [
+    {
+      "family": "H3",
+      "id": "10f5af88-9745-49cb-9d95-f9b4954c9896",
+      "status": "completed",
+      "description": "Eros baseline, IMG_2765; completed, superseded source take.",
+      "wall_seconds": 694.242
+    },
+    {
+      "family": "H3",
+      "id": "44f3dd75-f9d9-45a9-b831-56e3a50e7ea5",
+      "status": "failed",
+      "description": "Frame-zero native image anchor at 640x1136; latent shape failure.",
+      "wall_seconds": 62.194
+    },
+    {
+      "family": "H3",
+      "id": "ab2b92aa-0d07-4cb5-9bfe-7f7c43d4c45d",
+      "status": "interrupted",
+      "description": "Anchor retry at 640x1120; interrupted when source and recipe changed.",
+      "wall_seconds": 603.952
+    },
+    {
+      "family": "H3",
+      "id": "b5ab4b77-bf86-4957-927e-3c51cbaa144b",
+      "status": "completed",
+      "description": "Ref2VA + Turbo8, clean take; expression sequence useful, flat sheet scene rejected.",
+      "wall_seconds": 574.363
+    },
+    {
+      "family": "H3",
+      "id": "9278ebdb-b37b-4378-88ac-8e0e278df84e",
+      "status": "completed",
+      "description": "Same Ref2VA recipe and seed, lateral scene reference; accepted visual demonstration.",
+      "wall_seconds": 551.189
+    },
+    {
+      "family": "Seedance 2.5",
+      "id": "d1374cfd-6f06-40ac-9699-03db2656cec9",
+      "status": "completed",
+      "description": "Initial IMG_2765 seven-second omni-reference test; framing useful, facial timing loose."
+    },
+    {
+      "family": "Seedance 2.5",
+      "id": "d6de2178-90df-453f-98bd-be5d39c124fe",
+      "status": "failed",
+      "description": "Original MOV, start frame, sheet and portrait; no playable output."
+    },
+    {
+      "family": "Seedance 2.5",
+      "id": "beba7d5b-7a41-4380-ae97-90a623acfe9d",
+      "status": "failed",
+      "description": "Original MOV, start frame and sheet; no playable output."
+    },
+    {
+      "family": "Seedance 2.5",
+      "id": "dec85d09-91f4-4f5e-9b25-4f245ff4f4a9",
+      "status": "failed",
+      "description": "Original MOV plus sheet and portrait; no playable output."
+    },
+    {
+      "family": "Seedance 2.5",
+      "id": "7e717db1-5ffd-4bc4-9e0c-bc1bb6e867fd",
+      "status": "completed",
+      "description": "Normalized H.264 24 fps silent guide plus sheet and portrait; stronger visible facial beats and scene lighting."
+    }
+  ],
+  "yesterday_completed_jobs": [
+    {
+      "id": "518bb74a-af0d-436c-a626-71ed28d87f11",
+      "model": "seedance_2_5",
+      "status": "completed",
+      "created_at_utc": "2026-10-26T08:15:01.782Z",
+      "prompt": "Reference mapping:\n- Video 1 is a synchronized conditioning composite. The full-frame moving image is the authoritative completed train fight plate. The small labeled FACE GUIDE inset is the authoritative time-aligned Ko Style facial performance.\n- Picture 1 is the authoritative Ko Style facial identity, bowl-cut hair, curled moustache, and natural facial anatomy.\n\nProduce a clean full-frame edit of the fight plate. Remove the FACE GUIDE inset, its border, and all labels from the output. Preserve the fight plate's camera movement, train environment, composition, timing, body choreography, swords, gangster performance, wardrobe, lighting, scale, screen positions, and every action beat.\n\nApply only the synchronized FACE GUIDE performance to Ko Style's face and subtle head motion: exact mouth shapes, jaw opening, cheeks, brows, eyelids, blinks, eye direction, and head rhythm from 0.0 to 6.0 seconds. The gangster, both bodies, hands, swords, train, background, camera trajectory, and action timing remain unchanged.\n\nThis is a facial-performance edit, not a restaging. Do not reproduce the inset or labels. Do not generate a new fight, camera move, body performance, or dialogue performance. Do not change the gangster. Keep Ko Style's moustache stable, face scale correct, and teeth natural. No cuts, no identity swap, no geometry drift, no picture-in-picture, no text, no subtitles.",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zujS4KX1iVMTNt0vnORyjFltXw/hf_20261026_081501_518bb74a-af0d-436c-a626-71ed28d87f11.mp4"
+    },
+    {
+      "id": "672ebb2d-4108-4d9d-aa85-4a1e7f08c20e",
+      "model": "seedance_2_5",
+      "status": "completed",
+      "created_at_utc": "2026-10-26T08:11:46.008Z",
+      "prompt": "Reference mapping:\n- Video 1 is the authoritative completed fight plate. Preserve its camera movement, train environment, composition, timing, body choreography, swords, gangster performance, wardrobe, lighting, and every action beat.\n- Video 2 is the authoritative Ko Style facial-performance carrier. Transfer only its time-aligned Ko facial acting: mouth shapes, jaw opening, cheeks, brows, eyelids, blinks, eye direction, and small head rhythm.\n- Picture 1 is the authoritative Ko Style facial identity, bowl-cut hair, curled moustache, and natural facial anatomy.\n\nEdit Video 1 rather than restaging it. Keep Video 1's frame sequence and fight choreography unchanged. Apply Video 2's facial performance only to Ko Style's face and subtle head motion, synchronized from 0.0 to 6.0 seconds. The gangster, both bodies, hands, swords, train, background, camera trajectory, scale, screen position, and timing must remain exactly as Video 1.\n\nDo not generate a new fight, new camera move, new body performance, or new dialogue performance. Do not transfer Video 2's studio background, framing, body, or clothing. Do not change the gangster. Keep Ko Style's moustache stable, face scale anatomically correct, teeth natural, and face readable through motion. No cuts, no identity swap, no geometry drift, no text, no subtitles.",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zujS4KX1iVMTNt0vnORyjFltXw/hf_20261026_081146_672ebb2d-4108-4d9d-aa85-4a1e7f08c20e.mp4"
+    },
+    {
+      "id": "0ff99070-140c-423d-aaa1-da1dfc122d32",
+      "model": "seedance_2_5",
+      "status": "completed",
+      "created_at_utc": "2026-10-26T08:09:22.865Z",
+      "prompt": "Reference mapping:\n- Video 1 is the authoritative completed fight plate. Preserve its camera movement, train environment, composition, timing, body choreography, swords, gangster performance, wardrobe, lighting, and every action beat.\n- Video 2 is the authoritative Ko Style facial-performance carrier. Transfer only its time-aligned Ko facial acting: mouth shapes, jaw opening, cheeks, brows, eyelids, blinks, eye direction, and small head rhythm.\n- Picture 1 is the authoritative Ko Style facial identity, bowl-cut hair, curled moustache, and natural facial anatomy.\n\nEdit Video 1 rather than restaging it. Keep Video 1's frame sequence and fight choreography unchanged. Apply Video 2's facial performance only to Ko Style's face and subtle head motion, synchronized from 0.0 to 6.0 seconds. The gangster, both bodies, hands, swords, train, background, camera trajectory, scale, screen position, and timing must remain exactly as Video 1.\n\nDo not generate a new fight, new camera move, new body performance, or new dialogue performance. Do not transfer Video 2's studio background, framing, body, or clothing. Do not change the gangster. Keep Ko Style's moustache stable, face scale anatomically correct, teeth natural, and face readable through motion. No cuts, no identity swap, no geometry drift, no text, no subtitles.",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zujS4KX1iVMTNt0vnORyjFltXw/hf_20261026_080922_0ff99070-140c-423d-aaa1-da1dfc122d32.mp4"
+    },
+    {
+      "id": "f39b29f7-ff03-4330-872c-07bc102f9fde",
+      "model": "seedance_2_5",
+      "status": "completed",
+      "created_at_utc": "2026-10-26T08:08:02.404Z",
+      "prompt": "Reference mapping:\n- Video 1 is the authoritative completed fight plate. Preserve its camera movement, train environment, composition, timing, body choreography, swords, gangster performance, wardrobe, lighting, and every action beat.\n- Video 2 is the authoritative Ko Style facial-performance carrier. Transfer only its time-aligned Ko facial acting: mouth shapes, jaw opening, cheeks, brows, eyelids, blinks, eye direction, and small head rhythm.\n- Picture 1 is the authoritative Ko Style facial identity, bowl-cut hair, curled moustache, and natural facial anatomy.\n\nEdit Video 1 rather than restaging it. Keep Video 1's frame sequence and fight choreography unchanged. Apply Video 2's facial performance only to Ko Style's face and subtle head motion, synchronized from 0.0 to 6.0 seconds. The gangster, both bodies, hands, swords, train, background, camera trajectory, scale, screen position, and timing must remain exactly as Video 1.\n\nDo not generate a new fight, new camera move, new body performance, or new dialogue performance. Do not transfer Video 2's studio background, framing, body, or clothing. Do not change the gangster. Keep Ko Style's moustache stable, face scale anatomically correct, teeth natural, and face readable through motion. No cuts, no identity swap, no geometry drift, no text, no subtitles.",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zujS4KX1iVMTNt0vnORyjFltXw/hf_20261026_080802_f39b29f7-ff03-4330-872c-07bc102f9fde.mp4"
+    },
+    {
+      "id": "a04cfde2-d808-4a77-be61-c7b2c902a2d9",
+      "model": "seedance_2_5",
+      "status": "completed",
+      "created_at_utc": "2026-10-26T08:04:14.111Z",
+      "prompt": "Reference mapping:\n- Picture 1 is the authoritative Ko Style identity, curled moustache, bowl-cut hair, checked suit, tie, shoes, and body proportions.\n- Picture 2 is the authoritative opposing Asian gangster identity and dark street wardrobe.\n- Picture 3 is the authoritative high-speed train roof, environment, sunset lighting, and location design.\n\nCreate one continuous six-second cinematic fight plate on the roof of a moving high-speed train. Invent the body performance and facial acting naturally for this staging. Ko Style angrily delivers a challenge while the gangster gives contemptuous attitude. Their eyelines remain locked on each other.\n\nCamera and fight choreography:\n- 0.0-1.3 seconds: medium close-up on Ko Style over the gangster's near foreground shoulder. The gangster's back is toward camera. Ko Style speaks angrily; his face is readable.\n- 1.3-3.3 seconds: camera dollies backward over the gangster's shoulder and arcs clockwise, revealing both men with correct spatial separation. Ko Style points, draws one sword, and steps forward. The gangster draws his own sword.\n- 3.3-6.0 seconds: camera settles into a side-on full-body two-shot. Both fighters are in profile facing each other. They exchange two clean parries and finish in opposing guarded stances.\n\nPreserve screen direction, the 180-degree axis, anatomy, wardrobe, facial identity, and one sword per fighter. The gangster never faces the camera. No cuts, no front-facing lineup, no swapped faces, no extra people, no extra weapons, no floating swords, no text, no subtitles.",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zujS4KX1iVMTNt0vnORyjFltXw/hf_20261026_080414_a04cfde2-d808-4a77-be61-c7b2c902a2d9.mp4"
+    },
+    {
+      "id": "a16a31ef-4cca-48cb-824c-b707000cad5d",
+      "model": "seedance_2_5",
+      "status": "completed",
+      "created_at_utc": "2026-10-26T08:01:47.201Z",
+      "prompt": "Reference mapping:\n- Picture 1 is the authoritative Ko Style identity, curled moustache, bowl-cut hair, checked suit, tie, shoes, and body proportions.\n- Picture 2 is the authoritative opposing Asian gangster identity and dark street wardrobe.\n- Picture 3 is the authoritative high-speed train roof, environment, sunset lighting, and location design.\n\nCreate one continuous six-second cinematic fight plate on the roof of a moving high-speed train. Invent the body performance and facial acting naturally for this staging. Ko Style angrily delivers a challenge while the gangster gives contemptuous attitude. Their eyelines remain locked on each other.\n\nCamera and fight choreography:\n- 0.0-1.3 seconds: medium close-up on Ko Style over the gangster's near foreground shoulder. The gangster's back is toward camera. Ko Style speaks angrily; his face is readable.\n- 1.3-3.3 seconds: camera dollies backward over the gangster's shoulder and arcs clockwise, revealing both men with correct spatial separation. Ko Style points, draws one sword, and steps forward. The gangster draws his own sword.\n- 3.3-6.0 seconds: camera settles into a side-on full-body two-shot. Both fighters are in profile facing each other. They exchange two clean parries and finish in opposing guarded stances.\n\nPreserve screen direction, the 180-degree axis, anatomy, wardrobe, facial identity, and one sword per fighter. The gangster never faces the camera. No cuts, no front-facing lineup, no swapped faces, no extra people, no extra weapons, no floating swords, no text, no subtitles.",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zujS4KX1iVMTNt0vnORyjFltXw/hf_20261026_080147_a16a31ef-4cca-48cb-824c-b707000cad5d.mp4"
+    },
+    {
+      "id": "bd5a46a4-9bb9-45f3-bb43-ac388d695cf8",
+      "model": "seedance_2_5",
+      "status": "completed",
+      "created_at_utc": "2026-10-26T07:59:22.168Z",
+      "prompt": "Reference mapping:\n- Picture 1 is the authoritative Ko Style identity, curled moustache, bowl-cut hair, checked suit, tie, shoes, and body proportions.\n- Picture 2 is the authoritative opposing Asian gangster identity and dark street wardrobe.\n- Picture 3 is the authoritative high-speed train roof, environment, sunset lighting, and location design.\n\nCreate one continuous six-second cinematic fight plate on the roof of a moving high-speed train. Invent the body performance and facial acting naturally for this staging. Ko Style angrily delivers a challenge while the gangster gives contemptuous attitude. Their eyelines remain locked on each other.\n\nCamera and fight choreography:\n- 0.0-1.3 seconds: medium close-up on Ko Style over the gangster's near foreground shoulder. The gangster's back is toward camera. Ko Style speaks angrily; his face is readable.\n- 1.3-3.3 seconds: camera dollies backward over the gangster's shoulder and arcs clockwise, revealing both men with correct spatial separation. Ko Style points, draws one sword, and steps forward. The gangster draws his own sword.\n- 3.3-6.0 seconds: camera settles into a side-on full-body two-shot. Both fighters are in profile facing each other. They exchange two clean parries and finish in opposing guarded stances.\n\nPreserve screen direction, the 180-degree axis, anatomy, wardrobe, facial identity, and one sword per fighter. The gangster never faces the camera. No cuts, no front-facing lineup, no swapped faces, no extra people, no extra weapons, no floating swords, no text, no subtitles.",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zujS4KX1iVMTNt0vnORyjFltXw/hf_20261026_075922_bd5a46a4-9bb9-45f3-bb43-ac388d695cf8.mp4"
+    },
+    {
+      "id": "32dd158a-4578-4601-b948-1a1795b41559",
+      "model": "seedance_2_5",
+      "status": "completed",
+      "created_at_utc": "2026-10-26T07:55:00.771Z",
+      "prompt": "Reference mapping:\n- Video 1 is the exact six-second facial and vocal performance. Preserve its expression, phoneme timing, mouth shapes, eye direction, blinks, head rhythm, and emotional escalation from beginning to end.\n- Picture 1 supplies Maung's facial geometry only.\n- Picture 2 is the authoritative Ko Style identity, curled moustache, bowl-cut hair, checked suit, tie, shoes, and body proportions.\n\nCreate one continuous six-second action-carrier shot in a clean neutral-gray stunt rehearsal studio. Ko Style performs the exact Video 1 line while executing deliberate sword choreography. One realistic single-handed training sword is the only prop.\n\nCamera and action choreography:\n- 0.0-1.5 seconds: medium close-up from Ko Style's left three-quarter angle, around 35 degrees. His face is large and fully readable. He delivers Video 1 exactly; the sword is held lowered outside the close framing.\n- 1.5-3.2 seconds: without interrupting the facial performance, the camera dollies backward and arcs clockwise. As the frame opens, Ko Style raises the sword from a low guard, points it toward an off-camera opponent, and takes one controlled step forward.\n- 3.2-4.7 seconds: now framed knees-to-full-body, he performs one clean diagonal practice cut and recovers to guard. Keep the sword rigid, correctly gripped, and continuously attached to the same hand.\n- 4.7-6.0 seconds: camera settles near a left side three-quarter/profile view in a wide full-body frame. He performs one horizontal parry, finishes in a stable fighting stance, and preserves the final Video 1 mouth, jaw, eye, brow, and head beats.\n\nFace performance and sword action are simultaneous parts of one continuous take. The dialogue performance must not restart, paraphrase, average, or drift when the camera or body moves. Keep Ko Style's face readable, head-to-body scale realistic, moustache stable, teeth natural, eyeline consistent, and anatomy correct. No cuts, no second person, no train, no background action, no extra sword, no floating weapon, no hand mutation, no text, no subtitles.",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zujS4KX1iVMTNt0vnORyjFltXw/hf_20261026_075500_32dd158a-4578-4601-b948-1a1795b41559.mp4"
+    },
+    {
+      "id": "9e1486e3-acd3-4dd0-a164-03639090f837",
+      "model": "seedance_2_5",
+      "status": "completed",
+      "created_at_utc": "2026-10-26T07:52:26.905Z",
+      "prompt": "Reference mapping:\n- Video 1 is the exact six-second facial and vocal performance. Preserve its expression, phoneme timing, mouth shapes, eye direction, blinks, head rhythm, and emotional escalation from beginning to end.\n- Picture 1 supplies Maung's facial geometry only.\n- Picture 2 is the authoritative Ko Style identity, curled moustache, bowl-cut hair, checked suit, tie, shoes, and body proportions.\n\nCreate one continuous six-second action-carrier shot in a clean neutral-gray stunt rehearsal studio. Ko Style performs the exact Video 1 line while executing deliberate sword choreography. One realistic single-handed training sword is the only prop.\n\nCamera and action choreography:\n- 0.0-1.5 seconds: medium close-up from Ko Style's left three-quarter angle, around 35 degrees. His face is large and fully readable. He delivers Video 1 exactly; the sword is held lowered outside the close framing.\n- 1.5-3.2 seconds: without interrupting the facial performance, the camera dollies backward and arcs clockwise. As the frame opens, Ko Style raises the sword from a low guard, points it toward an off-camera opponent, and takes one controlled step forward.\n- 3.2-4.7 seconds: now framed knees-to-full-body, he performs one clean diagonal practice cut and recovers to guard. Keep the sword rigid, correctly gripped, and continuously attached to the same hand.\n- 4.7-6.0 seconds: camera settles near a left side three-quarter/profile view in a wide full-body frame. He performs one horizontal parry, finishes in a stable fighting stance, and preserves the final Video 1 mouth, jaw, eye, brow, and head beats.\n\nFace performance and sword action are simultaneous parts of one continuous take. The dialogue performance must not restart, paraphrase, average, or drift when the camera or body moves. Keep Ko Style's face readable, head-to-body scale realistic, moustache stable, teeth natural, eyeline consistent, and anatomy correct. No cuts, no second person, no train, no background action, no extra sword, no floating weapon, no hand mutation, no text, no subtitles.",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zujS4KX1iVMTNt0vnORyjFltXw/hf_20261026_075226_9e1486e3-acd3-4dd0-a164-03639090f837.mp4"
+    },
+    {
+      "id": "8472dd43-d48c-4c7b-91e1-e2b160772704",
+      "model": "seedance_2_5",
+      "status": "completed",
+      "created_at_utc": "2026-10-26T07:49:12.648Z",
+      "prompt": "Reference mapping:\n- Video 1 is the authoritative camera-matched Ko Style carrier. Preserve its exact facial performance, mouth shapes, blinks, eye direction, head rhythm, timing, and continuous camera path.\n- Picture 1 is the authoritative Ko Style identity and wardrobe.\n- Picture 2 is the opposing Asian gangster identity and wardrobe.\n- Picture 3 is the empty high-speed train roof location and lighting reference.\n\nCreate one continuous six-second cinematic phone-camera shot on the moving high-speed train roof. The camera choreography must match Video 1 rather than inventing a new shot.\n\nBlocking and camera choreography:\n- 0.0-1.5 seconds: start close on Ko Style, seen beyond the gangster's near foreground shoulder. The gangster's back and shoulder frame the near edge; the gangster never faces the camera. Ko Style's face is large and readable and performs Video 1 exactly.\n- 1.5-4.2 seconds: camera smoothly dollies backward over the gangster's shoulder and arcs clockwise, matching Video 1. Reveal correct spatial separation: Ko Style faces the gangster across the train roof. Ko Style points a warning and draws his sword while keeping the exact facial performance; the gangster reacts with attitude.\n- 4.2-6.0 seconds: settle into a side-on, full-body two-shot perpendicular to the train. Both fighters are in profile facing each other. They exchange two clean sword parries only after the camera reaches the wider framing.\n\nPreserve Video 1 facial timing without restarting, paraphrasing, averaging, or drifting. Keep Ko Style's bowl cut, curled moustache, checked suit and correct head-to-body scale. Maintain screen direction and the 180-degree axis. No front-facing lineup, no gangster looking into camera, no face swap between characters, no cuts, no third person, no text, no subtitles.",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zujS4KX1iVMTNt0vnORyjFltXw/hf_20261026_074912_8472dd43-d48c-4c7b-91e1-e2b160772704.mp4"
+    },
+    {
+      "id": "7f26ae11-4d1b-4c85-8419-d7765428b076",
+      "model": "seedance_2_5",
+      "status": "completed",
+      "created_at_utc": "2026-10-26T07:45:01.444Z",
+      "prompt": "Reference mapping:\n- Video 1 is the exact six-second facial and vocal performance. Preserve its expression, mouth shapes, eye direction, blinks, head rhythm, and timing from beginning to end.\n- Picture 1 supplies Maung's facial geometry only.\n- Picture 2 is the authoritative Ko Style identity, hair, curled moustache, brown checked suit, shirt, tie, socks, shoes, and body proportions.\n\nCreate one continuous six-second shot in a clean neutral-gray studio. Ko Style stands naturally with relaxed arms. Do not invent a new performance or gestures.\n\nCamera choreography:\n- 0.0-1.5 seconds: medium close-up from Ko Style's left three-quarter angle, approximately 35 degrees. His face is large and readable while he performs the exact Video 1 line.\n- 1.5-4.2 seconds: during the same uninterrupted performance, the camera smoothly dollies backward and arcs clockwise around him. He remains planted and keeps the exact Video 1 mouth, jaw, eyes, brows, head motion, and timing. The framing expands gradually from close-up to knees and then full body.\n- 4.2-6.0 seconds: the camera completes the arc and settles into a clean left side profile, approximately 80-90 degrees, in a wider full-body framing. Preserve the final Video 1 facial beats and head timing exactly.\n\nThe performance must not restart, interpolate, average, drift, or become a newly invented line while the camera moves. Maintain one identity, one moustache, anatomically correct face scale, natural teeth, stable eyeline, temporal continuity, and realistic phone-camera motion. No cuts, no second person, no train, no sword, no fighting, no text, no subtitles.",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zujS4KX1iVMTNt0vnORyjFltXw/hf_20261026_074501_7f26ae11-4d1b-4c85-8419-d7765428b076.mp4"
+    },
+    {
+      "id": "57f82d49-afcf-4a78-9b7a-4ebfb8ab56df",
+      "model": "seedance_2_5",
+      "status": "completed",
+      "created_at_utc": "2026-10-26T07:42:06.214Z",
+      "prompt": "Reference mapping:\n- Video 1 is the exact six-second facial and vocal performance. Preserve its expression, mouth shapes, eye direction, blinks, head rhythm, and timing from beginning to end.\n- Picture 1 supplies Maung's facial geometry only.\n- Picture 2 is the authoritative Ko Style identity, hair, curled moustache, brown checked suit, shirt, tie, socks, shoes, and body proportions.\n\nCreate one continuous six-second shot in a clean neutral-gray studio. Ko Style stands naturally with relaxed arms. Do not invent a new performance or gestures.\n\nCamera choreography:\n- 0.0-1.5 seconds: medium close-up from Ko Style's left three-quarter angle, approximately 35 degrees. His face is large and readable while he performs the exact Video 1 line.\n- 1.5-4.2 seconds: during the same uninterrupted performance, the camera smoothly dollies backward and arcs clockwise around him. He remains planted and keeps the exact Video 1 mouth, jaw, eyes, brows, head motion, and timing. The framing expands gradually from close-up to knees and then full body.\n- 4.2-6.0 seconds: the camera completes the arc and settles into a clean left side profile, approximately 80-90 degrees, in a wider full-body framing. Preserve the final Video 1 facial beats and head timing exactly.\n\nThe performance must not restart, interpolate, average, drift, or become a newly invented line while the camera moves. Maintain one identity, one moustache, anatomically correct face scale, natural teeth, stable eyeline, temporal continuity, and realistic phone-camera motion. No cuts, no second person, no train, no sword, no fighting, no text, no subtitles.",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zujS4KX1iVMTNt0vnORyjFltXw/hf_20261026_074206_57f82d49-afcf-4a78-9b7a-4ebfb8ab56df.mp4"
+    },
+    {
+      "id": "51e7680f-b9e2-47bc-a5cc-51dc35fd0ae7",
+      "model": "seedance_2_5",
+      "status": "completed",
+      "created_at_utc": "2026-10-26T07:25:01.443Z",
+      "prompt": "Reference mapping: Video 1 = the new clean source facial performance and voice; Picture 1 = source performer multiview geometry only; Picture 2 = authoritative Ko Style identity and wardrobe.\n\nCreate a six-second identity-normalized carrier. Ko Style performs the exact changing source dialogue and facial acting from a locked left side-profile camera angle about 80 degrees off frontal. Medium close-up from chest to above head, neutral gray studio, one continuous take. Preserve every source-timed gaze change, brow movement, eyelid narrowing, blink, cheek tension, lip shape, jaw opening, teeth visibility, chin motion and head rhythm, correctly reprojected into profile. Preserve the original voice and synchronization from Video 1. Preserve Ko's adult proportions, face anatomy, nose and jaw profile, bowl cut, natural teeth, dense moustache hairs and curled tip silhouette. Picture 1 may clarify hidden source geometry but must never determine output identity, hair, wardrobe or background. Do not copy the source man's identity, black shirt, room, arm pose or frontal camera. Hold the genuine side view throughout; no drift back to frontal. No smoothing, fixed smile, averaged expression, new gestures, camera orbit, cuts, subtitles or text.",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zujS4KX1iVMTNt0vnORyjFltXw/hf_20261026_072501_51e7680f-b9e2-47bc-a5cc-51dc35fd0ae7.mp4"
+    },
+    {
+      "id": "cd4326a7-967a-46d8-a9bf-b88b962eca03",
+      "model": "seedance_2_5",
+      "status": "completed",
+      "created_at_utc": "2026-10-26T07:24:49.893Z",
+      "prompt": "Reference mapping: Video 1 = the new clean source facial performance and voice; Picture 1 = source performer multiview geometry only; Picture 2 = authoritative Ko Style identity and wardrobe.\n\nCreate a six-second identity-normalized carrier. Ko Style performs the exact changing source dialogue and facial acting from a locked left three-quarter camera angle about 35 degrees off frontal. Medium close-up from chest to above head, neutral gray studio, one continuous take. Preserve every source-timed gaze change, eyebrow raise and furrow, eyelid narrowing, blink, cheek tension, asymmetric mouth corner, lip shape, jaw opening, teeth visibility, chin motion and head nod. Preserve the original voice and synchronization from Video 1. Preserve Ko's adult proportions, face anatomy, bowl cut, natural teeth, dense moustache hairs and both curled tips. Picture 1 may clarify hidden source geometry but must never determine output identity, hair, wardrobe or background. Do not copy the source man's identity, black shirt, room, arm pose or frontal camera. This is a real reframe, not exact source framing. No smoothing, fixed smile, averaged expression, new gestures, camera orbit, cuts, subtitles or text.",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zujS4KX1iVMTNt0vnORyjFltXw/hf_20261026_072449_cd4326a7-967a-46d8-a9bf-b88b962eca03.mp4"
+    },
+    {
+      "id": "a9d90868-bdda-42be-ba44-1bce188984ed",
+      "model": "seedance_2_5",
+      "status": "completed",
+      "created_at_utc": "2026-10-26T07:16:26.642Z",
+      "prompt": "Reference mapping: Video 1 = Ko Style three-quarter carrier performance; Picture 1 = authoritative Ko Style identity and wardrobe; Picture 2 = authoritative black-clad gangster opponent; Picture 3 = empty high-speed-train roof and mountain location.\n\nsubject_definitions:\n<Subject 1> is Ko Style from <Video 1> and <Picture 1>: bowl cut, dense curled handlebar moustache, natural teeth, brown checked suit, white shirt, striped tie, burgundy socks and brown shoes. <Video 1> is the authoritative changing facial performance and timing carrier. Preserve its gaze, brows, eyelids, cheeks, asymmetric mouth corners, lip shapes, jaw opening, teeth visibility, chin motion and head rhythm. Reframe it into the new train camera without averaging or inventing a new expression.\n<Subject 2> is the separate athletic Asian gangster from <Picture 2>, in the black bomber jacket, black shirt, black jeans and black shoes. Never mix the two identities or wardrobes.\n<Picture 3> supplies only the moving train roof, sunset mountains, overhead lines and lighting. It contains no starting pose and no precomposed fight.\n\nsummary:\nA continuous six-second action shot that transplants Ko's exact three-quarter carrier facial performance onto a newly staged train-roof sword confrontation. Begin close, then dolly out to full body and readable action.\n\ndetailed_description:\nPhotoreal live-action, 9:16 vertical, exactly 6 seconds, one continuous shot, 480p. 0.0-1.5s: tight medium close-up on Ko at the front of the moving train roof, maintaining the changing three-quarter facial performance from <Video 1>; gangster soft and distant behind. 1.5-4.0s: camera dollies steadily backward without cutting, revealing Ko pointing at the gangster, stepping into stance and drawing one short sword while preserving the carrier's facial timing. 4.0-6.0s: full-body two-shot; gangster draws a separate sword and they exchange two clear controlled non-graphic parries with correct spacing and eyelines. Ko remains the expressive lead and his face remains readable. Wind moves hair and clothing; the train and sunset mountains move rapidly. Correct adult proportions and head scale. No precomposed start image, no cuts, no teleporting, no extra people, no face or costume swapping, no subtitles or text.\n\noverall_soundscape:\nTime the visible lip performance to the same original six-second line represented by <Video 1>. Do not create new dialogue or music.",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zujS4KX1iVMTNt0vnORyjFltXw/hf_20261026_071626_a9d90868-bdda-42be-ba44-1bce188984ed.mp4"
+    },
+    {
+      "id": "c45d5d95-2a50-4de0-a747-52c548e364fc",
+      "model": "seedance_2_5",
+      "status": "completed",
+      "created_at_utc": "2026-10-26T07:14:26.517Z",
+      "prompt": "Reference mapping: Video 1 = source facial and timing performance; Picture 1 = authoritative original creature anatomy, face, materials and costume.\n\nsubject_definitions:\n<Subject 1> is the original compact alien forest wanderer from <Picture 1>: amber eyes, large tapered ears, weathered olive-gray skin, articulated human-compatible lips and jaw, dark moss-brown shoulder mantle, indigo-and-ochre travel clothing and leather boots. Preserve the exact original design, proportions, materials and costume in every frame.\n<Video 1> supplies only the exact changing facial performance, head timing and original voice timing. Do not copy the source man's identity, human hair, black shirt, room or frontal portrait framing.\n\nsummary:\nOne continuous six-second photoreal feature-film creature performance in a beautiful moonlit ancient forest observatory. Begin close enough to judge the creature's eyes and mouth, then gently dolly backward to reveal its full body while it delivers the source line.\n\nretention_analysis:\nPreserve the frame-timed gaze, brow motion, eyelid narrowing, blinks, cheek tension, asymmetric mouth corners, lip shapes, jaw opening, teeth visibility, chin motion and head nods from <Video 1>. Preserve the source speech timing. Invent only the creature's restrained hand and body gestures, environment and camera move.\n\ndetailed_description:\nLive-action-quality cinematic 3D CG, 9:16 vertical, exactly 6 seconds, one continuous take, 480p. 0.0-1.8s: medium close-up at creature eye level in a moonlit ancient forest observatory with mossy stone arches, subtle mist and bioluminescent plants; the creature begins the line with readable eyes and articulated mouth. 1.8-3.5s: a smooth gentle dolly backward reveals the complete body without changing performance timing. 3.5-6.0s: full-body view as the creature finishes the exact line with restrained expressive hands, shoulders and stance. Realistic weight, cloth, skin pores, fine hair simulation and grounded feet. Face remains readable and anatomically stable. No franchise resemblance, no cuts, no extra characters, no giant head, no fixed smile, no subtitles, no text.\n\noverall_soundscape:\nUse the original speech and timing from <Video 1>. Add only quiet forest night ambience beneath it; no new dialogue and no music.",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zujS4KX1iVMTNt0vnORyjFltXw/hf_20261026_071426_c45d5d95-2a50-4de0-a747-52c548e364fc.mp4"
+    },
+    {
+      "id": "5936cce8-85ad-46e4-9761-51cf75b4ed8f",
+      "model": "seedance_2_5",
+      "status": "completed",
+      "created_at_utc": "2026-10-26T07:01:53.522Z",
+      "prompt": "Reference mapping: Video 1 = source facial and audio performance; Picture 1 = authoritative Ko Style identity and wardrobe; Picture 2 = authoritative black-clad gangster opponent; Picture 3 = empty high-speed-train roof and surrounding mountain location.\n\nsubject_definitions:\n<Subject 1> is Ko Style from <Picture 1>: the bowl-cut, dense handlebar-moustache man in the brown checked suit, white shirt, striped tie, burgundy socks and brown shoes. Preserve his exact adult proportions, face anatomy, bowl haircut, natural teeth, moustache thickness and curled tips.\n<Subject 2> is the athletic Asian gangster from <Picture 2>, wearing the same black bomber jacket, black shirt, black jeans and black shoes. He is a separate man and never inherits Ko Style's face, hair, moustache or suit.\n<Video 1> supplies only <Subject 1>'s exact changing facial performance, head timing and synchronized original voice. Never copy the source man's identity, hair, black shirt, room or portrait framing.\n<Picture 3> supplies the moving train roof, sunset mountains, overhead lines and lighting. It contains no starting pose and no precomposed fight.\n\nsummary:\nOne continuous six-second action shot on the moving train roof. The shot begins close on Ko Style delivering the source line, then the camera dollies backward to reveal the gangster and a concise non-graphic sword exchange while Ko's source-timed facial and audio performance continues.\n\nretention_analysis:\nPreserve the full timing and intensity of <Video 1> on Ko Style: gaze, eyebrow changes, eyelid narrowing, blinks, cheek tension, asymmetric mouth corners, lip shapes, jaw opening, teeth visibility, chin motion and head nods. Preserve the original synchronized voice. Invent only the full-body fight choreography and new train camera. Preserve both reference identities and the train-roof design.\n\ndetailed_description:\nLive-action photorealistic 9:16 vertical video, exactly 6 seconds, one continuous shot, 480p. 0.0-1.5s: tight medium close-up on Ko Style standing on the moving train roof, his eyes and mouth large enough to judge; he directly delivers the original line with the exact source facial timing. The gangster is only a soft background presence behind him. 1.5-4.0s: the camera steadily dollies backward along the centerline of the train roof, never cutting, revealing Ko in front facing camera and the gangster several feet behind him. Ko points toward the gangster, shifts into a fighting stance and draws one short sword without interrupting the source-timed dialogue. 4.0-6.0s: the dolly continues to a full-body two-shot as the gangster draws a separate sword; they exchange two clear, controlled, non-graphic parries with readable spacing and correct eyelines. Ko remains the speaking lead and his face stays oriented enough toward camera to read. Wind moves clothing and hair; the train and landscape move rapidly beneath sunset light. Realistic adult proportions, correctly sized heads, distinct bodies and separate swords. No starting-frame composition, no split screen, no cuts, no teleporting, no extra people, no costume swaps, no face swap between men, no giant face, no subtitles or text.\n\noverall_soundscape:\nKeep the original speech from <Video 1> unchanged and exactly synchronized. Add subtle train wind, rail movement and two restrained sword contacts beneath the voice. No new dialogue and no music.",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zujS4KX1iVMTNt0vnORyjFltXw/hf_20261026_070153_5936cce8-85ad-46e4-9761-51cf75b4ed8f.mp4"
+    },
+    {
+      "id": "a763b383-95ce-4821-84c4-61f55ec03e7c",
+      "model": "seedance_2_5",
+      "status": "completed",
+      "created_at_utc": "2026-10-26T06:59:43.811Z",
+      "prompt": "Reference mapping: Video 1 = source facial and audio performance; Picture 1 = source performer multiview geometry only; Picture 2 = authoritative Ko Style identity and wardrobe.\n\nsubject_definitions:\n<Subject 1> is the bowl-cut, dense handlebar-moustache man in <Picture 2>. His exact face anatomy, side-profile nose and jaw, bowl haircut silhouette, moustache thickness and curled tips, natural teeth, brown checked suit, white shirt and striped tie remain consistent in every frame.\n<Video 1> supplies only the exact changing facial performance, head timing and original synchronized voice. Do not copy the source man's identity, hair, black shirt, room or frontal camera.\n<Picture 1> supplies source-performance geometry from front, side and chin-up angles only so the facial motion can be interpreted in profile. It must never determine output identity, hair, clothing or background.\n\nsummary:\nA six-second identity-normalized carrier: Ko Style performs the exact source dialogue and facial acting from a stable left side-profile camera.\n\nretention_analysis:\nPreserve the complete frame timing and intensity of <Video 1>: gaze changes, eyebrow motion, eyelid narrowing, blinks, cheek tension, lip protrusion, mouth corners, jaw opening, teeth visibility, chin motion and head nods. Preserve the original voice and synchronization. Replace identity and camera framing with <Picture 2>.\n\ndetailed_description:\nLive-action photorealistic 9:16 vertical video, exactly 6 seconds, one continuous take. Tight medium close-up from chest to above the head against a plain neutral gray studio background. The camera is locked at Ko Style's left side profile, about 80 degrees off frontal, close enough to judge eyelids, cheek, lips and jaw. This is a genuine profile reframing of the frontal source, not a recreation of the source camera. Ko remains in profile while delivering the exact original line with the same frame-timed expressive facial performance and synchronized source audio. His near eye remains naturally visible; do not rotate him back to frontal. Natural adult proportions, no oversized head. Preserve dense moustache hairs, the near curled tip, natural teeth and lip anatomy through every mouth shape. No smoothing, no fixed smile, no averaged expression, no invented dialogue, no camera movement, no cuts, no subtitles, no text.\n\noverall_soundscape:\nUse the original speech and room audio from <Video 1> unchanged and time-aligned. No new voice, music or sound effects.",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zujS4KX1iVMTNt0vnORyjFltXw/hf_20261026_065943_a763b383-95ce-4821-84c4-61f55ec03e7c.mp4"
+    },
+    {
+      "id": "a95bad38-590d-47c3-9816-6ea8844b97bb",
+      "model": "seedance_2_5",
+      "status": "completed",
+      "created_at_utc": "2026-10-26T06:59:12.315Z",
+      "prompt": "Reference mapping: Video 1 = source facial and audio performance; Picture 1 = source performer multiview geometry only; Picture 2 = authoritative Ko Style identity and wardrobe.\n\nsubject_definitions:\n<Subject 1> is the bowl-cut, dense handlebar-moustache man in <Picture 2>. His exact face anatomy, bowl haircut, moustache thickness and curled tips, natural teeth, brown checked suit, white shirt and striped tie remain consistent in every frame.\n<Video 1> supplies only the exact changing facial performance, head timing and original synchronized voice. Do not copy the source man's identity, hair, black shirt, room or frontal camera.\n<Picture 1> helps interpret the source performer's head volume and expressions from unseen angles only. It must never determine the output identity, hair, clothing or background.\n\nsummary:\nA six-second identity-normalized carrier: Ko Style performs the exact source dialogue and facial acting from a stable three-quarter camera angle.\n\nretention_analysis:\nPreserve the complete timing and intensity of <Video 1>: gaze changes, eyebrow raises and furrows, eyelid narrowing, blinks, cheek tension, asymmetric mouth corners, lip shapes, jaw opening, teeth visibility, chin motion and head nods. Preserve the original voice and synchronization. Replace identity and camera framing with <Picture 2>.\n\ndetailed_description:\nLive-action photorealistic 9:16 vertical video, exactly 6 seconds, one continuous take. Medium close-up from chest to above the head against a plain neutral gray studio background. The camera is locked at Ko Style's left three-quarter view, about 35 degrees off frontal, close enough to judge eyes and mouth. This is a genuine reframing of the frontal source, not a recreation of the source camera. Ko keeps the three-quarter orientation while delivering the exact original line with the same frame-timed expressive facial performance and synchronized source audio. Natural realistic face proportions; no oversized head. Preserve dense moustache hairs and both curled tips through every mouth shape. Preserve natural teeth and lip anatomy. No smoothing, no fixed smile, no averaged expression, no new gestures, no camera orbit, no cuts, no subtitles, no text.\n\noverall_soundscape:\nUse the original speech and room audio from <Video 1> unchanged and time-aligned. No new voice, music or sound effects.",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zujS4KX1iVMTNt0vnORyjFltXw/hf_20261026_065912_a95bad38-590d-47c3-9816-6ea8844b97bb.mp4"
+    }
+  ]
+}

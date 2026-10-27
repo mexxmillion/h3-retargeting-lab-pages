@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="One recorded line, a new character, a new camera and a new light setup. An illustrated account of H3 Ref2VA and Seedance 2.5 performance-transfer experiments, including failures and synchronized source comparisons.">
+  <title>Can a performance survive a new camera? — Maung’s performance transfer lab</title>
+  <link rel="stylesheet" href="article.css"><script src="article.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#article">Skip to article</a>
+<header class="masthead"><a href="oct26.html" class="wordmark">THE PERFORMANCE LAB<span>Field notes by Maung</span></a><nav aria-label="Article navigation"><a href="#watch">Watch</a><a href="#attempts">Attempt ledger</a><a href="earlier-notebook.html">Earlier notebook ↗</a><a href="https://github.com/mexxmillion/h3-performance-transfer-lab">GitHub ↗</a></nav></header>
+<main id="article">
+<article>
+  <header class="article-head prose">
+    <p class="kicker">Filmmaking × performance transfer · Field report 02</p>
+    <h1>Can a recorded performance survive a new camera?</h1>
+    <p class="standfirst">One actor delivers a line. A different character performs it in another frame, under another light. After several convincing-looking failures, a scene reference finally made the difference.</p>
+    <div class="byline"><span class="avatar">M</span><div><b>Maung · Performance Transfer Lab</b><span>October 26, 2026 · A follow-up to the earlier experiments</span></div></div>
+    <p class="reading-note">Every demonstrated render has a source-face PiP and a clean version. Sound is the original recording added for evaluation. Press play to hear it.</p>
+  </header>
+
+  <figure class="wide lead-figure">
+    <video controls playsinline preload="metadata" poster="assets/oct26/h3-lateral-poster.jpg" src="assets/oct26/h3-lateral-pip.mp4"></video>
+    <figcaption>Today’s strongest result: H3 Ref2VA, Turbo 8-step LoRA, Euler / Simple. The inset is the actor’s recorded face at the same time. Camera, character, gun staging and lighting come from the designed scene.</figcaption>
+  </figure>
+
+  <div class="prose">
+    <p class="opening">The test was never simply to put a moustache on a talking actor. The goal was to take the actor’s delivery—the pursed lips, asymmetric squints, jaw openings, teeth and emotional escalation—and use it to direct a different character in a different shot.</p>
+    <p>That distinction became painfully clear when a technically successful render came back with the character sheet’s pale wall and flat lighting. Ko held the gun. His mouth moved. But the camera and scene had not changed enough. The result looked plausible, while missing the point of the experiment.</p>
+    <blockquote>Keep the performance. Change the character, framing, camera angle and lighting.</blockquote>
+    <p>This report follows the useful results and the mistakes that led to today’s lateral gunpoint shot. It is a practical visual demonstration, not a claim of mathematically exact, 1:1 facial transfer. There is no new audio-only control or landmark score for today’s shot, and the final scene was explicitly designed in a reference image.</p>
+
+    <h2>The goal: separate acting from photography</h2>
+    <p>The source is an ordinary phone recording of Maung delivering a line. The target is Ko: a bowl haircut, curled handlebar moustache, brown checked suit and burgundy tie. The desired shot has a huge near-lens handgun, wide-angle foreshortening, a low three-quarter camera and hard amber/cyan lighting in a smoky crime-film interior.</p>
+    <p>We want the actor’s facial decisions to survive without carrying over his room, T-shirt, phone viewpoint or body framing. In earlier tests we also asked the model to invent sword action, a moving train and an opponent. Those tasks exposed how easily good staging can distract from weak performance fidelity.</p>
+  </div>
+  <div class="wide authority-map" aria-label="Input responsibilities">
+    <div><span>01 / TIME</span><h3>Recorded performance</h3><p>Changing face, expression order and line timing.</p></div>
+    <div><span>02 / PERSON</span><h3>Character sheet</h3><p>Ko’s anatomy, hair, moustache and wardrobe.</p></div>
+    <div><span>03 / SHOT</span><h3>Scene reference</h3><p>Camera, perspective, staging, background and light.</p></div>
+    <div><span>04 / SOUND</span><h3>Original recording</h3><p>One continuous dialogue track on the evaluation timeline.</p></div>
+  </div>
+  <div class="prose">
+    <h2>Yesterday: a carrier could change the camera</h2>
+    <p>The earlier session built an identity-normalized “carrier”: Ko reenacts the facial performance in a simple studio. That reduces the number of competing instructions before attempting a complex scene. Test 013 added a camera pullback. Test 014 added sword movement during the same line.</p>
+    <p>Both are six-second Seedance 2.5 outputs at 480p. The camera pullback visibly changes face scale and reveals the body; the sword version raises the prop and ends in a fighting stance. The intended near-profile camera arc remains modest. These are useful carrier demonstrations, with visible differences in facial timing that the source inset makes easier to judge.</p>
+  </div>
+  <section class="wide examples two" id="watch" aria-label="Yesterday’s successful carriers">
+    <figure class="example" data-example="sword"><div class="example-heading"><span class="badge useful">Useful carrier</span><h3>Sword action during the line</h3></div><div class="mode-switch" aria-label="Sword playback view"><button data-mode="pip" aria-pressed="true">Source-face PiP</button><button data-mode="clean" aria-pressed="false">Clean + sound</button></div><video controls playsinline preload="metadata" poster="assets/oct26/sword-poster.jpg" src="assets/oct26/sword-pip.mp4"></video><figcaption>Test 014. Watch the facial escalation as the sword enters frame and the body steps into a stance. The source inset uses the clean IMG_2764 take.</figcaption><a class="download" href="assets/oct26/sword-clean.mp4" download>Download clean clip ↓</a></figure>
+    <figure class="example" data-example="pullback"><div class="example-heading"><span class="badge useful">Useful carrier</span><h3>The camera pulls back</h3></div><div class="mode-switch" aria-label="Pullback playback view"><button data-mode="pip" aria-pressed="true">Source-face PiP</button><button data-mode="clean" aria-pressed="false">Clean + sound</button></div><video controls playsinline preload="metadata" poster="assets/oct26/pullback-poster.jpg" src="assets/oct26/pullback-pip.mp4"></video><figcaption>Test 013. A close view becomes a wider body shot while Ko continues the delivery. The move is mainly a pullback, with less orbit than requested.</figcaption><a class="download" href="assets/oct26/pullback-clean.mp4" download>Download clean clip ↓</a></figure>
+  </section>
+  <figure class="wide comparison"><video controls playsinline preload="metadata" src="assets/oct26/source-sword-pullback.mp4"></video><figcaption><b>Source / sword / pullback:</b> a baked, synchronized comparison with one original dialogue track. The source face is also available <a href="assets/oct26/source-vs-sword.mp4" download>beside the sword clip as a two-panel download</a>. The outputs have not been retimed to hide differences.</figcaption></figure>
+
+  <div class="prose">
+    <h2>Good fight footage was not enough</h2>
+    <p>Asking for identity, facial delivery, two fighters, swords, a moving train and a camera move in one pass produced coherent action. It did not consistently preserve the actor’s face performance. Mouth movement alone was a misleading success signal: the earlier H3 experiments already showed that audio could drive plausible lips without faithfully transferring eyes, brows or head attitude.</p>
+    <p>We then tried generating a fight plate first and editing the facial performance into it. This kept much of the train staging, but facial fidelity remained limited and was not established by a quantitative comparison. The examples below are retained as limited or failed performance-transfer evidence, even where the action itself looks usable.</p>
+  </div>
+  <section class="wide examples two" aria-label="Earlier limited results">
+    <figure class="example" data-example="train-direct"><div class="example-heading"><span class="badge rejected">Performance drift</span><h3>Direct source-to-train attempt</h3></div><div class="mode-switch"><button data-mode="pip" aria-pressed="true">Source-face PiP</button><button data-mode="clean" aria-pressed="false">Clean + sound</button></div><video controls playsinline preload="metadata" poster="assets/oct26/train-direct-poster.jpg" src="assets/oct26/train-direct-pip.mp4"></video><figcaption>Test 011 used the earlier IMG_2765 take. Its own source face and audio are used here. The scene is a success in composition, but not accepted as exact performance transfer.</figcaption><a class="download" href="assets/oct26/train-direct-clean.mp4" download>Download clean clip ↓</a></figure>
+    <figure class="example" data-example="fight-face-edit"><div class="example-heading"><span class="badge limited">Fidelity unproven</span><h3>Fight first, face second</h3></div><div class="mode-switch"><button data-mode="pip" aria-pressed="true">Source-face PiP</button><button data-mode="clean" aria-pressed="false">Clean + sound</button></div><video controls playsinline preload="metadata" poster="assets/oct26/fight-face-edit-poster.jpg" src="assets/oct26/fight-face-edit-pip.mp4"></video><figcaption>Test 015’s composite-guide branch. Body and camera survive better than the demanding facial-transfer claim. Compare individual eyes and mouth beats rather than the general emotion.</figcaption><a class="download" href="assets/oct26/fight-face-edit-clean.mp4" download>Download clean clip ↓</a></figure>
+  </section>
+
+  <div class="prose">
+    <h2>Today’s first mistake: the wrong source take</h2>
+    <p>The gunpoint experiment began with IMG_2765. An Eros H3 baseline and a seven-second Seedance run both produced playable results. The user then identified audio contamination in that take and selected IMG_2764. It is a different performance, so the two takes cannot be treated as interchangeable controls.</p>
+    <p>The historical pair below uses IMG_2765’s source inset and audio. The Seedance clip is presented over the same 155-frame interval as the H3 baseline. This is a timeline comparison, not a correction to either model’s timing. The old take is shown for the record; the accepted shot uses the clean recording.</p>
+  </div>
+  <section class="wide examples two" aria-label="Old-take baseline comparison">
+    <figure class="example" data-example="h3-eros-old"><div class="example-heading"><span class="badge limited">Superseded take</span><h3>H3 Eros baseline</h3></div><div class="mode-switch"><button data-mode="pip" aria-pressed="true">Source-face PiP</button><button data-mode="clean" aria-pressed="false">Clean + sound</button></div><video controls playsinline preload="metadata" poster="assets/oct26/h3-eros-old-poster.jpg" src="assets/oct26/h3-eros-old-pip.mp4"></video><figcaption>155 frames at 24 fps. A useful baseline, but it uses the contaminated source take and the earlier Eros recipe, not the final Ref2VA recipe.</figcaption><a class="download" href="assets/oct26/h3-eros-old-clean.mp4" download>Download clean clip ↓</a></figure>
+    <figure class="example" data-example="seedance-old"><div class="example-heading"><span class="badge rejected">Loose timing</span><h3>First Seedance gunpoint pass</h3></div><div class="mode-switch"><button data-mode="pip" aria-pressed="true">Source-face PiP</button><button data-mode="clean" aria-pressed="false">Clean + sound</button></div><video controls playsinline preload="metadata" poster="assets/oct26/seedance-old-poster.jpg" src="assets/oct26/seedance-old-pip.mp4"></video><figcaption>Strong character and gun staging, but the delivery was too loosely interpreted. The original generation was seven seconds; this review excerpt is 155 frames.</figcaption><a class="download" href="assets/oct26/seedance-old-clean.mp4" download>Download clean clip ↓</a></figure>
+  </section>
+
+  <div class="prose">
+    <h2>A guide needs clear ownership—and readable pixels</h2>
+    <p>For H3, SAM3 identified the foreground performer and produced a target-only inverted video guide. The rest of the room remained uninverted. One early mask latched onto the wrong target; it was rejected. The reviewed clean-take mask covers roughly 43.7–47.6% of each frame and carries the visible sequence of lips, eyes and jaw.</p>
+    <p>That guide is still a source-view video. It is not a camera-independent face rig. The model must infer how to re-express its timing from the new view. Inversion is part of this tested H3 workflow; it should not be assumed to improve another model’s conditioning.</p>
+    <p>Seedance received a normal-color performance guide. Three submissions failed without returning a playable result. Removing the start image and reducing reference count did not resolve it. A plain H.264, constant-24-fps, silent proxy finally completed. This makes input normalization a plausible contributor, but the backend supplied no detailed cause: we cannot prove a codec or reference-role limit from these failures.</p>
+  </div>
+  <figure class="prose guide"><video controls muted playsinline preload="metadata" src="assets/oct26/sam3-guide.mp4"></video><figcaption>Reviewed H3 guide, silent. Only the selected actor is inverted. The source room is guidance context, not the intended final environment.</figcaption></figure>
+  <div class="prose reference-sequence guide-pair">
+    <figure><img src="assets/oct26/guide-rejected.jpg" alt="Rejected guide leaves the foreground actor normal and selects the tiny figure on the monitor" loading="lazy"><figcaption>Rejected, old take: SAM3 selected the tiny figure on the monitor, leaving the real actor unmarked.</figcaption></figure>
+    <figure><img src="assets/oct26/guide-reviewed.jpg" alt="Reviewed clean-take guide inverts the actual foreground actor only" loading="lazy"><figcaption>Reviewed, clean take: the foreground actor owns the mask. These are different takes, shown to explain target selection.</figcaption></figure>
+  </div>
+
+  <div class="prose">
+    <h2>The render that passed technically and failed creatively</h2>
+    <p>With the clean take, the requested H3 configuration was Ref2VA plus the Turbo 8-step LoRA, Euler sampler and Simple scheduler. The first completed pass carried Ko and the gun, along with a useful expression sequence. It also inherited a pale background and flat lighting from the portrait and character sheet.</p>
+    <p>The user’s correction was precise: the goal was to see the framing, camera angle and lighting change together. A finished file with a recognizable character was insufficient. We kept that pass as a rejected scene-design result.</p>
+  </div>
+  <figure class="prose example" data-example="h3-flat"><div class="example-heading"><span class="badge rejected">Scene transfer failed</span><h3>White-sheet appearance dominates</h3></div><div class="mode-switch"><button data-mode="pip" aria-pressed="true">Source-face PiP</button><button data-mode="clean" aria-pressed="false">Clean + sound</button></div><video controls playsinline preload="metadata" poster="assets/oct26/h3-flat-poster.jpg" src="assets/oct26/h3-flat-pip.mp4"></video><figcaption>A completed Ref2VA render, not an intermediate. Identity and facial beats are useful, but the intended noir scene and lateral camera are missing.</figcaption><a class="download" href="assets/oct26/h3-flat-clean.mp4" download>Download rejected clip ↓</a></figure>
+
+  <div class="prose">
+    <h2>The change that mattered: give the shot a visual reference</h2>
+    <p>We first made a gunpoint image with a more cinematic room, then relit it with a hard amber key, cyan rim and smoky background. That second image was still too frontal. A third image moved the viewpoint toward a low three-quarter side view, pushed the face to the upper-right and made the gun and arms travel diagonally toward the lens.</p>
+    <p>Those are three completed still-image renders, not three H3 video attempts. The frontal relight was never submitted as its own H3 video. The side-view image became Picture 1, the primary scene reference, while the sheet became Picture 2, an identity and wardrobe backup. The prompt explicitly assigned the source video only facial timing and delivery.</p>
+  </div>
+  <div class="wide reference-sequence">
+    <figure><img src="assets/oct26/scene-initial.jpg" alt="Initial mostly frontal gunpoint reference in a naturally lit room" loading="lazy"><figcaption>1 · Establish the muzzle perspective</figcaption></figure>
+    <figure><img src="assets/oct26/scene-frontal.jpg" alt="Frontal Ko gunpoint reference relit with amber and cyan noir lighting" loading="lazy"><figcaption>2 · Change the light and background</figcaption></figure>
+    <figure><img src="assets/oct26/scene-lateral.jpg" alt="Low oblique gunpoint reference with Ko’s face upper-right and the handgun crossing frame diagonally" loading="lazy"><figcaption>3 · Change the camera and composition</figcaption></figure>
+  </div>
+  <div class="prose"><p>The final H3 run kept the clean source, reviewed guide, seed 100403, eight steps and Euler / Simple recipe. It changed the primary image reference and the reference-role prompt together. That matters when interpreting causality: this is a practical correction, not an isolated ablation proving that reference order alone caused the improvement.</p></div>
+  <figure class="wide comparison"><video controls playsinline preload="metadata" src="assets/oct26/h3-before-after.mp4"></video><figcaption><b>Same clean-take Ref2VA family, before and after the scene correction.</b> Left: portrait/sheet references dominate. Right: the lateral scene reference carries camera, perspective, environment and lighting.</figcaption></figure>
+
+  <div class="prose">
+    <h2>What today’s successful shot actually shows</h2>
+    <p>The final result holds the oblique body view, offset face, large near-lens muzzle, amber key and cyan edge against a dark interior. Across that new staging, it follows the broad source sequence: compressed lips, small vowels, squints, a late wide-open mouth and teeth peak, then the grimacing release. The source inset makes these changes inspectable rather than asking the reader to remember them.</p>
+    <p>This is the strongest visual result in today’s session. It demonstrates that a scene-matched reference can carry substantial camera and lighting changes while the performance video still contributes changing facial behavior. It does not establish exact correspondence of every blink, gaze, cheek deformation or phoneme. Nor is the apparent camera angle a calibrated 3D reconstruction; the 35–45° language describes the intended look.</p>
+  </div>
+  <figure class="prose example" data-example="h3-lateral"><div class="example-heading"><span class="badge accepted">Accepted visual demonstration</span><h3>The lateral H3 shot</h3></div><div class="mode-switch"><button data-mode="pip" aria-pressed="true">Source-face PiP</button><button data-mode="clean" aria-pressed="false">Clean + sound</button></div><video controls playsinline preload="metadata" poster="assets/oct26/h3-lateral-poster.jpg" src="assets/oct26/h3-lateral-pip.mp4"></video><figcaption>136 delivered frames, 640×1120, 24 fps. Five cloned frames were model context only and were removed from delivery. The original clean AAC was copied once; its packet hash matches the source.</figcaption><a class="download" href="assets/oct26/h3-lateral-clean.mp4" download>Download clean final ↓</a></figure>
+
+  <div class="prose">
+    <h2>Seedance versus H3: show the difference, keep the caveat</h2>
+    <p>The normalized Seedance retry improved markedly over its first gunpoint attempt. It has warm/cyan separation, stable Ko identity and a clearer small-vowel-to-open-mouth escalation. It remains mostly frontal. H3’s final pass follows the supplied lateral scene design more strongly.</p>
+    <p>Both use the clean IMG_2764 performance, but they did not receive equivalent controls. H3 received the inverted actor guide and the lateral scene image; the completed Seedance job received a normal-color proxy, sheet, portrait and a stricter expression prompt. It had no accepted lateral scene-image input. Seedance generated six seconds at 480p; this comparison presents its first 136 frames against the 136-frame H3 delivery without speed changes.</p>
+    <p>We can compare the practical outcomes of these workflows. We cannot use them to declare an unconditional model winner. A controlled next test would give both models the same scene design and source interval, then add a no-performance-video control and compare matched facial channels.</p>
+  </div>
+  <figure class="prose example" data-example="seedance-new"><div class="example-heading"><span class="badge useful">Improved guide</span><h3>Seedance with the normalized take</h3></div><div class="mode-switch"><button data-mode="pip" aria-pressed="true">Source-face PiP</button><button data-mode="clean" aria-pressed="false">Clean + sound</button></div><video controls playsinline preload="metadata" poster="assets/oct26/seedance-new-poster.jpg" src="assets/oct26/seedance-new-pip.mp4"></video><figcaption>The source inset and dialogue share time zero. Differences in the output’s timing are left visible. The native Seedance result was silent; this audio was added in post.</figcaption><a class="download" href="assets/oct26/seedance-new-clean.mp4" download>Download clean comparison excerpt ↓</a></figure>
+  <figure class="wide comparison"><video controls playsinline preload="metadata" src="assets/oct26/source-seedance-h3.mp4"></video><figcaption><b>Source / Seedance 2.5 / H3 Ref2VA Turbo8.</b> One rendered comparison file, one original dialogue track, 24 fps. It cannot develop browser playback drift between panels. <a href="assets/oct26/source-seedance-h3.mp4" download>Download the comparison ↓</a></figcaption></figure>
+
+  <section class="prose" id="attempts">
+    <h2>How many attempts did this take?</h2>
+    <p>Today’s gunpoint session contains <b>10 video-generation submissions</b>: five H3 and five Seedance. Five completed, four failed without a usable video, and one was interrupted when the source and recipe changed. Exporting a PiP or remuxing audio is not counted as another generation.</p>
+  </section>
+  <div class="wide count-strip"><div><strong>5</strong><span>H3 submissions<br>3 complete · 1 failed · 1 interrupted</span></div><div><strong>5</strong><span>Seedance submissions<br>2 complete · 3 failed</span></div><div><strong>3</strong><span>Auxiliary still renders<br>Qwen frame + two image edits</span></div><div><strong>19</strong><span>Earlier completed Seedance outputs found<br>Not a total historical attempt count</span></div></div>
+  <div class="wide ledger-wrap"><table class="ledger"><caption>Every video-generation submission in today’s gunpoint session</caption><thead><tr><th>Model / job</th><th>Status</th><th>What happened</th><th>Wall time</th></tr></thead><tbody id="attempt-rows"><tr><td colspan="4">The full ledger is available as <a href="assets/oct26/attempt-ledger.json">JSON</a>.</td></tr></tbody></table></div>
+  <div class="prose">
+    <p>The failed H3 image-anchor test at 640×1136 produced a latent shape error. Its 640×1120 retry was interrupted when the clean take superseded it. Neither has a finished video to show. The accepted final uses semantic scene-image conditioning and <b>zero native Add Guide image nodes</b>.</p>
+    <p>The three failed Seedance jobs are recorded even though there is no image evidence to play. Their exact backend causes and refund status were not returned. We therefore do not infer total credit spend. Yesterday’s Test 015 receipt records five completed 18-credit jobs, or 90 credits for that branch only; it is not a project-wide bill.</p>
+    <details><summary>Open the earlier session’s 19 completed job records</summary><p>This is a returned completed-history list, including repeated or stale-state results. Job prompts sometimes describe the requested configuration rather than the actual output; the local reviewed files remain the authority.</p><ol id="yesterday-jobs"></ol></details>
+    <p><a href="assets/oct26/attempt-ledger.json" download>Download attempt IDs and provenance</a> · <a href="assets/oct26/media-manifest.json" download>Download media hashes and alignment manifest</a></p>
+
+    <h2>The recipe, and what remains open</h2>
+    <p>The accepted local configuration used <code>minimax_h3_ref2va_pruned_int8_convrot</code> with <code>minimax_h3_ref2v_turbo_8step_v1.0_768p_comfyui_bf16</code> at strength 1.0; Euler, Simple, eight steps; seed 100403; 640×1120; 24 fps. The text encoder was Qwen3-VL 32B H3 NVFP4 AWQ, with the H3 INT8 ConvRot video VAE and FP32 audio VAE.</p>
+    <p>The clean source normalized to 136 frames. H3 used 141 frames internally and delivered only the original interval. We retained the earlier continuous audio by copying its AAC packets into the final MP4. Matching packet hashes verify audio preservation, not facial-performance fidelity. The public clean and PiP copies are presentation encodes of the picture; the audio is copied.</p>
+    <p>The useful change was to design the final shot in a still and use that reference to tell the video model what the new camera should see. The next test should measure how much facial timing survives that transfer, especially gaze, blinks and asymmetric tension, with equivalent inputs and an audio-only baseline. Today’s result is a useful shot and a clearer experiment—not yet a general solution for arbitrary stunt, identity and camera combinations.</p>
+    <div class="downloads"><a href="assets/oct26/h3-2764-ref2va-turbo8-scene-v3-workflow.json" download>Final ComfyUI workflow ↓</a><a href="assets/oct26/h3-2764-ref2va-turbo8-scene-v3-prompt.txt">Exact final prompt ↗</a><a href="assets/oct26/h3-2764-ref2va-turbo8-scene-v3-contract.json">Recipe + input hashes ↗</a><a href="assets/oct26/source-clean.mp4" download>Clean source recording ↓</a></div>
+    <p class="fineprint">Alignment policy: source time zero, no dynamic time warping, no output-specific offset search, no lip-sync correction. Six-second carrier examples include the short padded tail used in those tests. Historical old-take examples retain the old recording and its known audio contamination. New-source examples use the clean take. No additional model generations were made to prepare this article.</p>
+    <p class="fineprint">References: <a href="earlier-notebook.html">earlier visual notebook</a>; <a href="https://github.com/mexxmillion/h3-performance-transfer-lab/blob/main/PROJECT_GOAL.md">original project goal</a>; <a href="https://github.com/mexxmillion/h3-performance-transfer-lab/blob/main/RESULTS.md">earlier measurements</a>. Findings here are based on the saved run records and visible comparisons, rather than vendor performance claims.</p>
+  </div>
+</article>
+</main>
+<footer><p>Performance Transfer Lab · October 26, 2026</p><a href="#article">Back to the beginning ↑</a><a href="https://github.com/mexxmillion/h3-performance-transfer-lab">Reproducibility repository ↗</a></footer>
+</body></html>

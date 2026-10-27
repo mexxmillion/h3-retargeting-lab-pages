@@ -1,0 +1,1171 @@
+{
+  "id": "b62a2bde-ef7a-46fd-b836-2beac92bc5cd",
+  "revision": 0,
+  "version": 0.4,
+  "last_node_id": 38,
+  "last_link_id": 29,
+  "nodes": [
+    {
+      "id": 2,
+      "type": "MiniMaxH3ReferencePack",
+      "pos": [
+        0,
+        0
+      ],
+      "size": [
+        480,
+        700
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image_1",
+          "type": "IMAGE",
+          "links": [
+            5
+          ]
+        },
+        {
+          "name": "image_2",
+          "type": "IMAGE",
+          "links": [
+            8
+          ]
+        },
+        {
+          "name": "image_3",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "image_4",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "image_5",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "image_6",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "image_7",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "image_8",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "image_9",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "video_1",
+          "type": "IMAGE",
+          "links": [
+            6
+          ]
+        },
+        {
+          "name": "video_2",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "video_3",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "video_audio_1",
+          "type": "AUDIO",
+          "links": [
+            7,
+            12,
+            25
+          ]
+        },
+        {
+          "name": "video_audio_2",
+          "type": "AUDIO",
+          "links": []
+        },
+        {
+          "name": "video_audio_3",
+          "type": "AUDIO",
+          "links": []
+        },
+        {
+          "name": "audio_1",
+          "type": "AUDIO",
+          "links": []
+        },
+        {
+          "name": "audio_2",
+          "type": "AUDIO",
+          "links": []
+        },
+        {
+          "name": "audio_3",
+          "type": "AUDIO",
+          "links": []
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "links": [
+            2
+          ]
+        },
+        {
+          "name": "debug",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3ReferencePack"
+      },
+      "widgets_values": [
+        "subject_definitions:\n<Picture 1> is the close portrait identity authority for ONE adult Ko Style man. <Picture 2> is the character and wardrobe sheet of the SAME man: rounded dark bowl haircut with blunt fringe, dense central handlebar moustache with two long upward-curled tips, light chin stubble, brown checked suit, white shirt and burgundy striped tie. All views depict one person; sheet borders, labels and studio background never appear. <Subject 1> is ONLY the large foreground performer marked by inverted colors in <Video 1>. The pictures define identity and wardrobe. Video 1 defines his changing facial performance and timing, never his facial identity.\nsummary:\nTransform the foreground performer into Ko Style holding and aiming a handgun directly into the camera. One continuous vertical crime-comic shot with exact source-timed expression changes.\nretention_analysis:\nReplace the performer, clothes and plain room with the requested cinematic composition. Retain the exact source frame order, head motion, gaze, blink, brow, cheek, lip, jaw and expression timing. Retain source audio timing. The handgun remains safely in his hands as a fictional movie prop; no discharge, impact, injury or victim is shown.\ndetailed_description:\n[Shot 1] Exact normalized source frames [0,136) at 24fps, 136 delivered frames, with only 5 cloned tail frames for model padding. The camera is physically at the gun point: the dark circular muzzle is extremely close to the lower-center lens, with dramatic 18mm wide-angle foreshortening of barrel, hands and forearms. Ko Style leans behind it, face still large and readable. Use a dynamic diagonal pulp-comic composition, 1990s neo-noir crime-film energy, hard directional key, cool colored rim, warm practical accents, deep graphic shadows, subtle film grain and believable metal highlights. Preserve a single coherent handgun, correct trigger-guard geometry and two believable hands; no duplicate weapon, extra fingers, firing flash, text or new person.\nFACIAL PERFORMANCE IS THE PRIMARY REQUIREMENT. Transfer the source frame by frame through Ko Style's own anatomy: initial puckered lips and closed/narrowed eyes; small open speaking vowels; stern pressed lips; brow furrows and lifts; asymmetric squints; cheek bunching; jaw openings; the late wide open-mouth peak; clenched-teeth grimace; and final compressed disgusted expression. Preserve exact onset and intensity instead of averaging into one tough-guy face. His moustache deforms naturally with the upper lip without hiding mouth motion. Keep his natural tooth shapes, bowl-hair silhouette, moustache and checked suit through every expression. Do not inherit the source actor's face or hair. Do not freeze the portrait's neutral mouth. Video 1 is the sole temporal guide; use no still anchors.\nKeep the gun aimed into the lens for the entire shot while allowing the source's slight shoulder and arm movement. The shot remains continuous with no cuts, zoom resets, collage, character-sheet panel, studio backdrop or camera reversal. Restore natural colors from the target-only inversion. End on source frame 135; do not slow or stretch the padded tail.\noverall_soundscape:\nPreserve the original source recording and timing; add no gunshot or new voice.\nnon_diegetic_music:\nNo new music.",
+        "{\"references\": [{\"kind\": \"image\", \"file\": \"h3_mobile/Ko_Gunpoint/ko-face.jpg\"}, {\"kind\": \"image\", \"file\": \"h3_mobile/Ko_Gunpoint/ko-sheet.png\"}, {\"kind\": \"video\", \"file\": \"h3_mobile/Ko_Gunpoint/actor-inverted-guide.mp4\", \"use_soundtrack\": true}]}",
+        "",
+        "none",
+        "",
+        "google/gemini-3-flash-preview",
+        "medium",
+        "",
+        "",
+        "replacement",
+        640,
+        1120,
+        5.875,
+        1280,
+        false
+      ]
+    },
+    {
+      "id": 9,
+      "type": "UNETLoader",
+      "pos": [
+        520,
+        0
+      ],
+      "size": [
+        420,
+        140
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            26
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UNETLoader"
+      },
+      "widgets_values": [
+        "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+        "default"
+      ]
+    },
+    {
+      "id": 11,
+      "type": "CLIPLoader",
+      "pos": [
+        0,
+        780
+      ],
+      "size": [
+        420,
+        158
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader"
+      },
+      "widgets_values": [
+        "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+        "minimax",
+        "default"
+      ]
+    },
+    {
+      "id": 12,
+      "type": "VAELoader",
+      "pos": [
+        520,
+        400
+      ],
+      "size": [
+        420,
+        140
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            3,
+            22
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "minimax_h3_video_vae_int8_convrot.safetensors"
+      ]
+    },
+    {
+      "id": 13,
+      "type": "VAELoader",
+      "pos": [
+        520,
+        620
+      ],
+      "size": [
+        420,
+        140
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            4,
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "minimax_h3_audio_vae_fp32.safetensors"
+      ]
+    },
+    {
+      "id": 14,
+      "type": "MiniMaxH3ReferenceToVideo",
+      "pos": [
+        1040,
+        0
+      ],
+      "size": [
+        420,
+        386
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 1
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "link": 2,
+          "widget": {
+            "name": "prompt"
+          }
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 3
+        },
+        {
+          "name": "audio_vae",
+          "type": "VAE",
+          "link": 4
+        },
+        {
+          "name": "ref_images.ref_image_0",
+          "type": "IMAGE",
+          "link": 5
+        },
+        {
+          "name": "ref_videos.ref_video_0",
+          "type": "IMAGE",
+          "link": 6
+        },
+        {
+          "name": "ref_video_audios.ref_video_audio_0",
+          "type": "AUDIO",
+          "link": 7
+        },
+        {
+          "name": "ref_images.ref_image_1",
+          "type": "IMAGE",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            14
+          ]
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            10
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3ReferenceToVideo"
+      },
+      "widgets_values": [
+        "",
+        640,
+        1120,
+        141,
+        "match"
+      ]
+    },
+    {
+      "id": 15,
+      "type": "MiniMaxH3NativeAudioLock",
+      "pos": [
+        1560,
+        0
+      ],
+      "size": [
+        420,
+        168
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 9
+        },
+        {
+          "name": "av_latent",
+          "type": "LATENT",
+          "link": 10
+        },
+        {
+          "name": "audio_vae",
+          "type": "VAE",
+          "link": 11
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            13,
+            15
+          ]
+        },
+        {
+          "name": "av_latent",
+          "type": "LATENT",
+          "links": [
+            20
+          ]
+        },
+        {
+          "name": "exact_audio",
+          "type": "AUDIO",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3NativeAudioLock"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 16,
+      "type": "BasicGuider",
+      "pos": [
+        1560,
+        280
+      ],
+      "size": [
+        420,
+        140
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 13
+        },
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 14
+        }
+      ],
+      "outputs": [
+        {
+          "name": "GUIDER",
+          "type": "GUIDER",
+          "links": [
+            17
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BasicGuider"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 17,
+      "type": "RandomNoise",
+      "pos": [
+        1560,
+        700
+      ],
+      "size": [
+        420,
+        140
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "NOISE",
+          "type": "NOISE",
+          "links": [
+            16
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RandomNoise"
+      },
+      "widgets_values": [
+        100403,
+        "fixed"
+      ]
+    },
+    {
+      "id": 18,
+      "type": "KSamplerSelect",
+      "pos": [
+        1560,
+        880
+      ],
+      "size": [
+        420,
+        140
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SAMPLER",
+          "type": "SAMPLER",
+          "links": [
+            18
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSamplerSelect"
+      },
+      "widgets_values": [
+        "euler"
+      ]
+    },
+    {
+      "id": 19,
+      "type": "BasicScheduler",
+      "pos": [
+        1560,
+        460
+      ],
+      "size": [
+        420,
+        180
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 15
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            19
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BasicScheduler"
+      },
+      "widgets_values": [
+        "simple",
+        8,
+        1.0
+      ]
+    },
+    {
+      "id": 20,
+      "type": "SamplerCustomAdvanced",
+      "pos": [
+        2080,
+        0
+      ],
+      "size": [
+        420,
+        190
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "noise",
+          "type": "NOISE",
+          "link": 16
+        },
+        {
+          "name": "guider",
+          "type": "GUIDER",
+          "link": 17
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 18
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 19
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 20
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            21
+          ]
+        },
+        {
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SamplerCustomAdvanced"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 21,
+      "type": "VAEDecode",
+      "pos": [
+        2080,
+        280
+      ],
+      "size": [
+        420,
+        140
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 21
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 22
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            23
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 22,
+      "type": "ImageFromBatch",
+      "pos": [
+        2080,
+        460
+      ],
+      "size": [
+        420,
+        154
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 23
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            24
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageFromBatch"
+      },
+      "widgets_values": [
+        0,
+        136
+      ]
+    },
+    {
+      "id": 24,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        2600,
+        0
+      ],
+      "size": [
+        420,
+        324
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 24
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 25
+        },
+        {
+          "name": "meta_batch",
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 24.0,
+        "loop_count": 0,
+        "filename_prefix": "H3/Ko_Gunpoint/ko_gunpoint_2764_ref2va_turbo8_euler_simple_v1",
+        "format": "video/h264-mp4",
+        "pingpong": false,
+        "save_output": true,
+        "pix_fmt": "yuv420p",
+        "crf": 16,
+        "save_metadata": true,
+        "trim_to_audio": false
+      }
+    },
+    {
+      "id": 34,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        1620,
+        1320
+      ],
+      "size": [
+        420,
+        154
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 26
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            27
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly"
+      },
+      "widgets_values": [
+        "minimax_h3_ref2v_turbo_8step_v1.0_768p_comfyui_bf16.safetensors",
+        1.0
+      ]
+    },
+    {
+      "id": 36,
+      "type": "MiniMaxChunkFeedForward",
+      "pos": [
+        2160,
+        0
+      ],
+      "size": [
+        420,
+        154
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 27
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            28
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxChunkFeedForward"
+      },
+      "widgets_values": [
+        8,
+        4096
+      ]
+    },
+    {
+      "id": 37,
+      "type": "MiniMaxLowVRAMAttention",
+      "pos": [
+        2160,
+        440
+      ],
+      "size": [
+        420,
+        140
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 28
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            29
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxLowVRAMAttention"
+      },
+      "widgets_values": [
+        4
+      ]
+    },
+    {
+      "id": 38,
+      "type": "ModelAttentionBackend",
+      "pos": [
+        2160,
+        880
+      ],
+      "size": [
+        420,
+        140
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 29
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelAttentionBackend"
+      },
+      "widgets_values": [
+        "comfy kitchen attention"
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      11,
+      0,
+      14,
+      0,
+      "CLIP"
+    ],
+    [
+      2,
+      2,
+      18,
+      14,
+      1,
+      "STRING"
+    ],
+    [
+      3,
+      12,
+      0,
+      14,
+      2,
+      "VAE"
+    ],
+    [
+      4,
+      13,
+      0,
+      14,
+      3,
+      "VAE"
+    ],
+    [
+      5,
+      2,
+      0,
+      14,
+      4,
+      "IMAGE"
+    ],
+    [
+      6,
+      2,
+      9,
+      14,
+      5,
+      "IMAGE"
+    ],
+    [
+      7,
+      2,
+      12,
+      14,
+      6,
+      "AUDIO"
+    ],
+    [
+      8,
+      2,
+      1,
+      14,
+      7,
+      "IMAGE"
+    ],
+    [
+      9,
+      38,
+      0,
+      15,
+      0,
+      "MODEL"
+    ],
+    [
+      10,
+      14,
+      1,
+      15,
+      1,
+      "LATENT"
+    ],
+    [
+      11,
+      13,
+      0,
+      15,
+      2,
+      "VAE"
+    ],
+    [
+      12,
+      2,
+      12,
+      15,
+      3,
+      "AUDIO"
+    ],
+    [
+      13,
+      15,
+      0,
+      16,
+      0,
+      "MODEL"
+    ],
+    [
+      14,
+      14,
+      0,
+      16,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      15,
+      15,
+      0,
+      19,
+      0,
+      "MODEL"
+    ],
+    [
+      16,
+      17,
+      0,
+      20,
+      0,
+      "NOISE"
+    ],
+    [
+      17,
+      16,
+      0,
+      20,
+      1,
+      "GUIDER"
+    ],
+    [
+      18,
+      18,
+      0,
+      20,
+      2,
+      "SAMPLER"
+    ],
+    [
+      19,
+      19,
+      0,
+      20,
+      3,
+      "SIGMAS"
+    ],
+    [
+      20,
+      15,
+      1,
+      20,
+      4,
+      "LATENT"
+    ],
+    [
+      21,
+      20,
+      0,
+      21,
+      0,
+      "LATENT"
+    ],
+    [
+      22,
+      12,
+      0,
+      21,
+      1,
+      "VAE"
+    ],
+    [
+      23,
+      21,
+      0,
+      22,
+      0,
+      "IMAGE"
+    ],
+    [
+      24,
+      22,
+      0,
+      24,
+      0,
+      "IMAGE"
+    ],
+    [
+      25,
+      2,
+      12,
+      24,
+      1,
+      "AUDIO"
+    ],
+    [
+      26,
+      9,
+      0,
+      34,
+      0,
+      "MODEL"
+    ],
+    [
+      27,
+      34,
+      0,
+      36,
+      0,
+      "MODEL"
+    ],
+    [
+      28,
+      36,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      29,
+      37,
+      0,
+      38,
+      0,
+      "MODEL"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "workflow_name": "Ko Style gun-point | IMG_2764 | Ref2VA Turbo8 Euler simple"
+  }
+}
