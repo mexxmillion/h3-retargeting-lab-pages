@@ -14,6 +14,8 @@ document.querySelectorAll('[data-example]').forEach((example) => {
         video.volume = volume;
         if (playing) video.play().catch(() => {});
       }, { once: true });
+      video.preload = 'auto';
+      video.removeAttribute('poster');
       video.src = `assets/oct26/${example.dataset.example}-${button.dataset.mode}.mp4`;
       video.load();
     });
